@@ -1,0 +1,86 @@
+@import '/style/css/color.css';
+@import '/style/css/guide.css';
+
+$ease: all .08s ease-in-out;
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {  
+    font-size: 14px;
+    font-family: var(--typeface);
+    color: var(--grey);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.page {
+    height: 100%;
+    background: var(--dark);
+}
+
+.section {
+    height: 100%;
+}
+
+.header {
+    padding: var(--g-16) 0;
+    background: var(--black);
+
+    .logo img {
+        height: var(--g-16);
+    }
+}
+
+.grid {
+    display: flex;
+}
+
+.container {
+    width: 1280px;
+    margin: var(--center-hr);
+}
+.navigation{
+    width: 12%;
+    margin-top: var(--g-24);
+
+    ul {
+
+        li {
+            position: relative;
+
+            a {
+                font: var(--single-14-rg);
+                color: var(--white);
+                padding: var(--g-8) var(--g-12);
+                transition: $ease;
+                border-radius: var(--g-6);
+
+                &:hover {
+                    background: var(--primary-m);
+                }
+            }
+        }
+    }
+
+    .nav-head {
+        font-size: var(--g-16);
+        line-height: var(--g-24);
+        margin-bottom: var(--g-4);
+        font-weight: bold;
+    }
+}
+
