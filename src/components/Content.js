@@ -1,7 +1,7 @@
 import React from 'react';
-import Home from './Home';
-import Color from './Color';
-import Typography from './Typography';
+import Home from '../pages/Home';
+import Color from '../pages/Color';
+import Typography from '../pages/Typography';
 import {
   BrowserRouter as Router,
   Routes,

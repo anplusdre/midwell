@@ -71,6 +71,9 @@ a {
 .navigation .list {
   margin-bottom: var(--g-24);
 }
+.navigation .nav-dropdown {
+  display: none;
+}
 .navigation ul li {
   position: relative;
   margin-bottom: var(--g-8);
@@ -80,13 +83,17 @@ a {
   color: var(--grey-disable-strong);
   padding: var(--g-6) var(--g-16);
   padding-left: 0;
-  transition: all 0.04s ease-in-out;
+  transition: color 0.02s ease-in-out;
 }
 .navigation ul li a:hover {
   color: var(--white);
 }
 .navigation ul li .active {
-  color: var(--primary-m);
+  color: var(--primary-04);
+}
+.navigation ul li .active:hover {
+  color: var(--white);
+  font-weight: bold;
 }
 .navigation .nav-head {
   font-size: var(--g-16);
