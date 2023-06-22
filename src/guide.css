@@ -18,6 +18,10 @@
   --single-14-rg:normal normal normal 14px/16px var(--typeface) ;
 }
 
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: bold;

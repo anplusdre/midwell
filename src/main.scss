@@ -1,12 +1,17 @@
-@import '/style/css/color.css';
-@import '/style/css/guide.css';
+@import './color.css';
+@import './guide.css';
 
-$ease: all .08s ease-in-out;
+$ease: all .04s ease-in-out;
 
-html, body {
+html, body, .App {
     width: 100%;
     height: 100%;
     margin: 0;
+    text-align: unset;
+}
+
+.dark {
+    background: var(--dark-bg);
 }
 
 body {  
@@ -38,15 +43,25 @@ a {
 
 .header {
     padding: var(--g-16) 0;
-    background: var(--black);
+    background: var(--dark-bg);
 
-    .logo img {
-        height: var(--g-16);
+    .logo {
+    display: inline-flex;
+        img {
+            height: 20px;
+        }
     }
 }
 
-.grid {
-    display: flex;
+.Grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    margin-top: var(--g-24);
+    gap: var(--g-24);
+}
+
+.Content {
+    width: 100%;
 }
 
 .container {
@@ -54,24 +69,33 @@ a {
     margin: var(--center-hr);
 }
 .navigation{
-    width: 12%;
-    margin-top: var(--g-24);
+    position: -webkit-sticky;
+    position: sticky;
+
+    .list {
+        margin-bottom: var(--g-24);
+    }
 
     ul {
 
         li {
             position: relative;
+            margin-bottom: var(--g-8);
 
             a {
                 font: var(--single-14-rg);
-                color: var(--white);
-                padding: var(--g-8) var(--g-12);
+                color: var(--grey-disable-strong);
+                padding: var(--g-6) var(--g-16);
+                padding-left: 0;
                 transition: $ease;
-                border-radius: var(--g-6);
 
                 &:hover {
-                    background: var(--primary-m);
+                    color: var(--white);
                 }
+            }
+
+            .active {
+                color: var(--primary-m);
             }
         }
     }
@@ -79,8 +103,13 @@ a {
     .nav-head {
         font-size: var(--g-16);
         line-height: var(--g-24);
-        margin-bottom: var(--g-4);
-        font-weight: bold;
+        margin: 0 0 var(--g-12) 0;
+        font-weight: 600;
+        color: var(--white);
     }
+    
 }
 
+.colorPage {
+    background: var(--warning-m);
+}

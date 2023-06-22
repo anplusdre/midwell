@@ -1,9 +1,14 @@
 @import './color.css';
 @import './guide.css';
-html, body {
+html, body, .App {
   width: 100%;
   height: 100%;
   margin: 0;
+  text-align: unset;
+}
+
+.dark {
+  background: var(--dark-bg);
 }
 
 body {
@@ -35,14 +40,24 @@ a {
 
 .header {
   padding: var(--g-16) 0;
-  background: var(--black);
+  background: var(--dark-bg);
+}
+.header .logo {
+  display: inline-flex;
 }
 .header .logo img {
-  height: var(--g-16);
+  height: 20px;
 }
 
-.grid {
-  display: flex;
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  margin-top: var(--g-24);
+  gap: var(--g-24);
+}
+
+.Content {
+  width: 100%;
 }
 
 .container {
@@ -51,25 +66,36 @@ a {
 }
 
 .navigation {
-  width: 12%;
-  margin-top: var(--g-24);
+  position: sticky;
+}
+.navigation .list {
+  margin-bottom: var(--g-24);
 }
 .navigation ul li {
   position: relative;
+  margin-bottom: var(--g-8);
 }
 .navigation ul li a {
   font: var(--single-14-rg);
-  color: var(--white);
-  padding: var(--g-8) var(--g-12);
-  transition: all 0.08s ease-in-out;
-  border-radius: var(--g-6);
+  color: var(--grey-disable-strong);
+  padding: var(--g-6) var(--g-16);
+  padding-left: 0;
+  transition: all 0.04s ease-in-out;
 }
 .navigation ul li a:hover {
-  background: var(--primary-m);
+  color: var(--white);
+}
+.navigation ul li .active {
+  color: var(--primary-m);
 }
 .navigation .nav-head {
   font-size: var(--g-16);
   line-height: var(--g-24);
-  margin-bottom: var(--g-4);
-  font-weight: bold;
+  margin: 0 0 var(--g-12) 0;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.colorPage {
+  background: var(--warning-m);
 }/*# sourceMappingURL=main.css.map */

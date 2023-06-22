@@ -1,13 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import './main.css';
-import MyHeader from './components/header';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <div className="App">
-      <MyHeader />
-    </div>
+      <div className="App">
+        <Header />
+        <div className='container'>
+          <div className='Grid'>
+            <Navigation />
+          </div>
+        </div>
+      </div>
   );
 }
 
