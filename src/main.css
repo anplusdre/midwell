@@ -1,6 +1,8 @@
 @import './color.css';
 @import './guide.css';
-html, body, .App {
+html,
+body,
+.App {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -39,8 +41,9 @@ a {
 }
 
 .header {
-  padding: var(--g-16) 0;
+  padding: 20px 0;
   background: var(--dark-bg);
+  border-bottom: 1px solid var(--black);
 }
 .header .logo {
   display: inline-flex;
@@ -58,6 +61,7 @@ a {
 
 .Content {
   width: 100%;
+  padding: 0 var(--g-24);
 }
 
 .container {
@@ -72,11 +76,32 @@ a {
   margin-bottom: var(--g-24);
 }
 .navigation .nav-dropdown {
-  display: none;
+  height: 0;
+  opacity: 0;
+  flex-direction: column;
+  overflow: hidden;
+  transition: opacity 0.15s ease 0s, height 0.2s ease-in-out 0s;
+}
+.navigation .nav-dropdown ul li {
+  margin: 0;
+}
+.navigation .nav-dropdown ul li a {
+  position: relative;
+  padding-left: var(--g-24);
+  border-left: 1px solid var(--grey-04);
+}
+.navigation .nav-dropdown ul a.active {
+  border-left: 1px solid var(--primary-04);
+}
+.navigation .nav-dropdown.open {
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.15s ease 0s, height 0.2s ease-in-out 0s;
 }
 .navigation ul li {
   position: relative;
-  margin-bottom: var(--g-8);
+  overflow: hidden;
+  margin: var(--g-4) 0;
 }
 .navigation ul li a {
   font: var(--single-14-rg);
@@ -103,6 +128,81 @@ a {
   color: var(--white);
 }
 
-.colorPage {
-  background: var(--warning-m);
+.colorPalette {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: var(--g-16);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--g-8);
+}
+.cards .colorBox,
+.cards .colorInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cards .colorBox {
+  position: relative;
+  padding: var(--g-40) 0 var(--g-16) 0;
+  border-top-left-radius: var(--g-8);
+  border-top-right-radius: var(--g-8);
+  align-items: center;
+}
+.cards .colorBox .colorName {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: var(--g-32);
+}
+.cards .colorBox .contrastCheck {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+.cards .colorBox .overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+.cards .colorBox .overlay img {
+  height: var(--g-24);
+}
+.cards .colorBox .overlay:hover {
+  opacity: 1;
+}
+.cards .colorInfo {
+  gap: 8px;
+  align-self: stretch;
+  padding: var(--pd-smd-md);
+}
+.cards .colorInfo .colorNumbers,
+.cards .colorInfo .colorHex {
+  font-size: 16px;
+  line-height: 24px;
+}
+.cards .colorInfo .colorNumbers {
+  color: var(--white);
+}
+.cards .colorInfo .colorHex {
+  font: var(--single-14-rg);
+  color: var(--grey);
+  text-transform: uppercase;
+}
+
+.colors {
+  background: var(--cards-bg);
 }/*# sourceMappingURL=main.css.map */

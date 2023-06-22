@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
-  NavLink
+  NavLink,
 } from "react-router-dom";
 import Content from './Content';
 
 const Navigation = () => {
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <Router>
       <div className="navigation">
@@ -15,14 +20,15 @@ const Navigation = () => {
             <div className="nav-head">Guides</div>
             <ul>
                 <li><NavLink to="/" activeclassname="active">Overview</NavLink></li>
-                <li><NavLink to="/color" activeclassname="active">Colors</NavLink>
-                    <div className='nav-dropdown'>
+                <li><NavLink to="/color"  activeclassname="active" onClick={handleDropdownToggle}>Colors</NavLink>
+                    <div className={`nav-dropdown ${isDropdownOpen ? 'open' : ''}`}>
                         <ul>
-                            <li><NavLink to="/colorshade">Shade & Tint</NavLink></li>
+                            <li><NavLink to="/shadetint">Shade & Tint</NavLink></li>
+                            <li><NavLink to="/colorusage">Usage</NavLink></li>
                         </ul>
                     </div>
                 </li>
-                <li><NavLink to="/typography">Typography</NavLink></li>
+                {/* <li><NavLink to="/typography">Typography</NavLink></li> */}
             </ul>
         </div>
         <div className="list">

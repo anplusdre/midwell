@@ -1,7 +1,8 @@
 import './App.css';
 import './main.css';
-import Header from './components/Header';
 import Navigation from './components/Navigation';
+import Header from './components/Header';
+
 
 function App() {
   return (
