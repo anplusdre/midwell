@@ -113,6 +113,27 @@ a {
 .navigation ul li a:hover {
   color: var(--white);
 }
+.navigation ul li .hasDropDown {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+.navigation ul li .right::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url(./assets/right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.navigation ul li .down::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url(./assets/down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .navigation ul li .active {
   color: var(--primary-04);
 }

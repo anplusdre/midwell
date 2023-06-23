@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   NavLink,
@@ -12,6 +12,7 @@ const Navigation = () => {
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+  
 
   return (
     <Router>
@@ -20,8 +21,8 @@ const Navigation = () => {
             <div className="nav-head">Guides</div>
             <ul>
                 <li><NavLink to="/" activeclassname="active">Overview</NavLink></li>
-                <li><NavLink to="/color"  activeclassname="active" onClick={handleDropdownToggle}>Colors</NavLink>
-                    <div className={`nav-dropdown ${isDropdownOpen ? 'open' : ''}`}>
+                <li><NavLink to="/color" activeclassname="active" className={`hasDropDown ${isDropdownOpen ? 'down' : 'right'}`} onClick={handleDropdownToggle}>Colors</NavLink>
+                    <div className={`nav-dropdown ${isDropdownOpen ? 'open down' : ''}`}>
                         <ul>
                             <li><NavLink to="/shadetint">Shade & Tint</NavLink></li>
                             <li><NavLink to="/colorusage">Usage</NavLink></li>

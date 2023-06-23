@@ -133,6 +133,36 @@ a {
                 &:hover {
                     color: var(--white);
                 }
+
+
+            }
+
+            .hasDropDown {
+                display: flex;
+                justify-content: space-between;
+                vertical-align: middle;
+            }
+
+            .right {
+                &::after {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    background-image: url(./assets/right.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+
+            .down {
+                &::after {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    background-image: url(./assets/down.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
             }
 
             .active {
