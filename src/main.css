@@ -142,7 +142,7 @@ a {
   font-weight: bold;
 }
 .navigation .nav-head {
-  font-size: var(--g-16);
+  font-size: 14px;
   line-height: var(--g-24);
   margin: 0 0 var(--g-12) 0;
   font-weight: 600;
@@ -150,44 +150,58 @@ a {
 }
 
 .colorPalette {
+  display: flex;
+  flex-direction: column;
+}
+.colorPalette .cardTitle {
+  font-size: var(--g-24);
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: var(--g-8);
+}
+.colorPalette .cardSubTitle {
+  margin-bottom: var(--g-24);
+  color: var(--grey);
+}
+.colorPalette .cardsGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: var(--g-16);
+  margin-bottom: var(--g-40);
 }
-
-.cards {
+.colorPalette .cardsGrid .cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: var(--g-8);
 }
-.cards .colorBox,
-.cards .colorInfo {
+.colorPalette .cardsGrid .cards .colorBox,
+.colorPalette .cardsGrid .cards .colorInfo {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.cards .colorBox {
+.colorPalette .cardsGrid .cards .colorBox {
   position: relative;
-  padding: var(--g-40) 0 var(--g-16) 0;
+  padding: var(--g-32) 0 var(--g-24) 0;
   border-top-left-radius: var(--g-8);
   border-top-right-radius: var(--g-8);
   align-items: center;
 }
-.cards .colorBox .colorName {
+.colorPalette .cardsGrid .cards .colorBox .colorName {
   font-size: 20px;
   font-weight: 600;
   line-height: var(--g-32);
 }
-.cards .colorBox .contrastCheck {
+.colorPalette .cardsGrid .cards .colorBox .contrastCheck {
   position: absolute;
   left: 12px;
   top: 12px;
 }
-.cards .colorBox .overlay {
+.colorPalette .cardsGrid .cards .colorBox .overlay {
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -199,26 +213,26 @@ a {
   background: rgba(0, 0, 0, 0.5);
   transition: all 0.2s ease-in-out;
 }
-.cards .colorBox .overlay img {
+.colorPalette .cardsGrid .cards .colorBox .overlay img {
   height: var(--g-24);
 }
-.cards .colorBox .overlay:hover {
+.colorPalette .cardsGrid .cards .colorBox .overlay:hover {
   opacity: 1;
 }
-.cards .colorInfo {
+.colorPalette .cardsGrid .cards .colorInfo {
   gap: 8px;
   align-self: stretch;
   padding: var(--pd-smd-md);
 }
-.cards .colorInfo .colorNumbers,
-.cards .colorInfo .colorHex {
+.colorPalette .cardsGrid .cards .colorInfo .colorNumbers,
+.colorPalette .cardsGrid .cards .colorInfo .colorHex {
   font-size: 16px;
   line-height: 24px;
 }
-.cards .colorInfo .colorNumbers {
+.colorPalette .cardsGrid .cards .colorInfo .colorNumbers {
   color: var(--white);
 }
-.cards .colorInfo .colorHex {
+.colorPalette .cardsGrid .cards .colorInfo .colorHex {
   font: var(--single-14-rg);
   color: var(--grey);
   text-transform: uppercase;

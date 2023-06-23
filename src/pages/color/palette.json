@@ -1,0 +1,21 @@
+{
+    "base": [
+      { "background": "var(--white)", "color": "var(--black)", "contrast": "AAA", "hex": "#FFFFFF", "colorName": "White", "colorNumbers": "256" },
+      { "background": "var(--black)", "color": "var(--white)", "contrast": "AAA", "hex": "#2A2F39", "colorName": "Black", "colorNumbers": "128" },
+      { "background": "var(--dark)", "color": "var(--white)", "contrast": "AAA", "hex": "#0D131E", "colorName": "Dark", "colorNumbers": "0" }
+    ],
+    "primary": [
+      { "background": "var(--primary-00)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-01)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-02)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-03)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-04)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-m)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-06)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-07)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-08)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-09)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" },
+      { "background": "var(--primary-xx)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96" }
+    ]
+  }
+  

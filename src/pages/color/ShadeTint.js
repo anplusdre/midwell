@@ -1,12 +1,12 @@
 import React from 'react';
 import copyIcon from '../../assets/copy.svg';
+import colors from './palette.json';
 
-const ShadeTint = () => {
-
+const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers }) => {
   const handleCopyToClipboard = (value) => {
     navigator.clipboard.writeText(value)
       .then(() => {
-        
+        // Clipboard copied successfully, handle any desired logic here
       })
       .catch((error) => {
         console.error('Copy to clipboard failed:', error);
@@ -14,29 +14,49 @@ const ShadeTint = () => {
   };
 
   return (
-    <div className='colorPalette'>
-          <div className='cards colors'>
-            <div className='colorBox' style={{ background: 'var(--white)'}}>
-              <div className='overlay'>
-                <img src={copyIcon} onClick={() => handleCopyToClipboard('#FFFFFF')} alt="Copy" ></img>
-              </div>
-              <div className='colorName' style={{color: 'var(--black)'}}>
-                White
-              </div>
-              <div className='contrastCheck' style={{color: 'var(--grey)'}}>AAA</div>
-
-            </div>
-
-            <div className='colorInfo'>
-              <div className='colorNumbers'>
-                256
-              </div>
-              <div className='colorHex'>
-                #FFFFFF
-              </div>
-            </div>
-          </div>
+    <div className='cards colors'>
+      <div className='colorBox' style={{ background }}>
+        <div className='overlay'>
+          <img src={copyIcon} onClick={() => handleCopyToClipboard(hex)} alt="Copy" />
+        </div>
+        <div className='colorName' style={{ color }}>
+          {colorName}
+        </div>
+        <div className='contrastCheck' style={{ color: 'var(--grey)' }}>
+          {contrast}
+        </div>
       </div>
+      <div className='colorInfo'>
+        <div className='colorNumbers'>{colorNumbers}</div>
+        <div className='colorHex'>{hex}</div>
+      </div>
+    </div>
+  );
+};
+
+const ShadeTint = () => {
+  const { base, primary } = colors;
+
+  return (
+    <>
+      <div className='colorPalette'>
+        <div className='cardTitle'>Base Colors</div>
+        <div className='cardSubTitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div className='cardsGrid'>
+          {base.map((color, index) => (
+            <ColorCard key={index} {...color} />
+          ))}
+        </div>
+
+        <div className='cardTitle'>Primary Color</div>
+        <div className='cardSubTitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div className='cardsGrid'>
+          {primary.map((color, index) => (
+            <ColorCard key={index} {...color} />
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 
