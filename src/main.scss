@@ -204,8 +204,8 @@ a {
 
     .cardsGrid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-column-gap: var(--g-16);
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: var(--g-16);
         margin-bottom: var(--g-40);
 
         .cards {
@@ -214,6 +214,7 @@ a {
             justify-content: center;
             align-items: center;
             border-radius: var(--g-8);
+            border: 1px solid var(--black);
 
             .colorBox,
             .colorInfo {
@@ -232,13 +233,14 @@ a {
                 align-items: center;
 
                 .colorName {
-                    font-size: 20px;
-                    font-weight: 600;
+                    font-size: var(--g-16);
+                    font-weight: 500;
                     line-height: var(--g-32);
                 }
 
                 .contrastCheck {
                     position: absolute;
+                    font-size: var(--g-12);
                     left: 12px;
                     top: 12px;
                 }
@@ -252,7 +254,9 @@ a {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: rgba(0, 0, 0, .5);
+                    background: var(--cards-bg);
+                    border-top-left-radius: var(--g-6);
+                    border-top-right-radius: var(--g-6);
                     transition: all .2s ease-in-out;
 
                     img {
@@ -269,12 +273,11 @@ a {
             .colorInfo {
                 gap: 8px;
                 align-self: stretch;
-                padding: var(--pd-smd-md);
+                padding: var(--pd-smd-smd);
 
                 .colorNumbers,
                 .colorHex {
-                    font-size: 16px;
-                    line-height: 24px;
+                    font-size: 14px;
                 }
 
                 .colorNumbers {
@@ -292,5 +295,5 @@ a {
 }
 
 .colors {
-    background: var(--cards-bg);
+    // background: var(--cards-bg);
 }

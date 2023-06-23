@@ -2,7 +2,7 @@ import React from 'react';
 import copyIcon from '../../assets/copy.svg';
 import colors from './palette.json';
 
-const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers }) => {
+const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers, contrastColor }) => {
   const handleCopyToClipboard = (value) => {
     navigator.clipboard.writeText(value)
       .then(() => {
@@ -22,7 +22,7 @@ const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers }
         <div className='colorName' style={{ color }}>
           {colorName}
         </div>
-        <div className='contrastCheck' style={{ color: 'var(--grey)' }}>
+        <div className='contrastCheck' style={{ color: contrastColor }}>
           {contrast}
         </div>
       </div>
@@ -30,12 +30,13 @@ const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers }
         <div className='colorNumbers'>{colorNumbers}</div>
         <div className='colorHex'>{hex}</div>
       </div>
+      
     </div>
   );
 };
 
 const ShadeTint = () => {
-  const { base, primary } = colors;
+  const { base, primary, positive } = colors;
 
   return (
     <>
@@ -52,6 +53,14 @@ const ShadeTint = () => {
         <div className='cardSubTitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         <div className='cardsGrid'>
           {primary.map((color, index) => (
+            <ColorCard key={index} {...color} />
+          ))}
+        </div>
+
+        <div className='cardTitle'>Positive Color</div>
+        <div className='cardSubTitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div className='cardsGrid'>
+          {positive.map((color, index) => (
             <ColorCard key={index} {...color} />
           ))}
         </div>
