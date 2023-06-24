@@ -1,34 +1,71 @@
 {
     "base": [
       { "background": "var(--white)", "color": "var(--black)", "contrast": "AAA", "hex": "#FFFFFF", "colorName": "White", "colorNumbers": "256", "contrastColor": "var(--black)"},
-      { "background": "var(--black)", "color": "var(--white)", "contrast": "AAA", "hex": "#2A2F39", "colorName": "Black", "colorNumbers": "128", "contrastColor": "var(--white)" },
-      { "background": "var(--dark)", "color": "var(--white)", "contrast": "AAA", "hex": "#0D131E", "colorName": "Dark", "colorNumbers": "0", "contrastColor": "var(--white)" }
+      { "background": "var(--black)", "color": "var(--white)", "contrast": "AAA", "hex": "#2C2D2F", "colorName": "Black", "colorNumbers": "128", "contrastColor": "var(--white)" },
+      { "background": "var(--dark)", "color": "var(--white)", "contrast": "AAA", "hex": "#151516", "colorName": "Dark", "colorNumbers": "0", "contrastColor": "var(--white)" }
+    ],
+    "grey": [
+      { "background": "var(--grey-00)", "color": "var(--black)", "contrast": "AAA", "hex": "#FAFAFA", "colorName": "00", "colorNumbers": "96", "contrastColor": "var(--black)" },
+      { "background": "var(--grey-fade)", "color": "var(--black)", "contrast": "AAA", "hex": "#F5F5F6", "colorName": "Fade", "colorNumbers": "92", "contrastColor": "var(--black)" },
+      { "background": "var(--grey-stroke)", "color": "var(--black)", "contrast": "AAA", "hex": "#E2E3E4", "colorName": "Stroke", "colorNumbers": "77", "contrastColor": "var(--black)" },
+      { "background": "var(--grey-disable)", "color": "var(--black)", "contrast": "AAA", "hex": "#DCDDDE", "colorName": "Disable", "colorNumbers": "72", "contrastColor": "var(--black)" },
+      { "background": "var(--grey-04)", "color": "var(--black)", "contrast": "AAA", "hex": "#BDBFC2", "colorName": "04", "colorNumbers": "48", "contrastColor": "var(--black)" },
+      { "background": "var(--grey-m)", "color": "var(--white)", "contrast": "AAA", "hex": "#81848A", "colorName": "M", "colorNumbers": "0", "contrastColor": "var(--white)" },
+      { "background": "var(--grey-06)", "color": "var(--white)", "contrast": "AAA", "hex": "#66686D", "colorName": "06", "colorNumbers": "21", "contrastColor": "var(--white)" },
+      { "background": "var(--grey-07)", "color": "var(--white)", "contrast": "AAA", "hex": "#434548", "colorName": "07", "colorNumbers": "48", "contrastColor": "var(--white)" },
+      { "background": "var(--grey-08)", "color": "var(--white)", "contrast": "AAA", "hex": "#37393B", "colorName": "08", "colorNumbers": "57", "contrastColor": "var(--white)" }
     ],
     "primary": [
-      { "background": "var(--primary-00)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96", "contrastColor": "var(--black)" },
-      { "background": "var(--primary-01)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "01", "colorNumbers": "88", "contrastColor": "var(--black)" },
-      { "background": "var(--primary-02)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "02", "colorNumbers": "80", "contrastColor": "var(--black)" },
-      { "background": "var(--primary-03)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "03", "colorNumbers": "24", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-04)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "04", "colorNumbers": "16", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-m)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "05", "colorNumbers": "0", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-06)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "06", "colorNumbers": "12", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-07)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "07", "colorNumbers": "24", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-08)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "08", "colorNumbers": "48", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-09)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "09", "colorNumbers": "64", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-xx)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "xx", "colorNumbers": "80", "contrastColor": "var(--white)" }
+      { "background": "var(--primary-00)", "color": "var(--primary-m)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96", "contrastColor": "var(--black)" },
+      { "background": "var(--primary-01)", "color": "var(--primary-m)", "contrast": "AAA", "hex": "#E4ECFF", "colorName": "01", "colorNumbers": "88", "contrastColor": "var(--black)" },
+      { "background": "var(--primary-02)", "color": "var(--primary-m)", "contrast": "AAA", "hex": "#D2E0FF", "colorName": "02", "colorNumbers": "80", "contrastColor": "var(--black)" },
+      { "background": "var(--primary-03)", "color": "var(--white)", "contrast": "AAA", "hex": "#5289FF", "colorName": "03", "colorNumbers": "24", "contrastColor": "var(--white)" },
+      { "background": "var(--primary-04)", "color": "var(--white)", "contrast": "AAA", "hex": "#407DFF", "colorName": "04", "colorNumbers": "16", "contrastColor": "var(--white)" },
+      { "background": "var(--primary-m)", "color": "var(--white)", "contrast": "AAA", "hex": "#1C64FF", "colorName": "M", "colorNumbers": "0", "contrastColor": "var(--white)" },
+      { "background": "var(--primary-06)", "color": "var(--white)", "contrast": "AAA", "hex": "#1958E0", "colorName": "06", "colorNumbers": "12", "contrastColor": "var(--white)" },
+      { "background": "var(--primary-07)", "color": "var(--white)", "contrast": "AAA", "hex": "#154CC2", "colorName": "07", "colorNumbers": "24", "contrastColor": "var(--white)" },
+      { "background": "var(--primary-08)", "color": "var(--white)", "contrast": "AAA", "hex": "#0F3485", "colorName": "08", "colorNumbers": "48", "contrastColor": "var(--white)" },
+      { "background": "var(--primary-09)", "color": "var(--white)", "contrast": "AAA", "hex": "#0A245C", "colorName": "09", "colorNumbers": "64", "contrastColor": "var(--white)" },
+      { "background": "var(--primary-xx)", "color": "var(--white)", "contrast": "AAA", "hex": "#061433", "colorName": "xx", "colorNumbers": "80", "contrastColor": "var(--white)" }
     ],
     "positive": [
-      { "background": "var(--primary-00)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "00", "colorNumbers": "96", "contrastColor": "var(--black)" },
-      { "background": "var(--primary-01)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "01", "colorNumbers": "88", "contrastColor": "var(--black)" },
-      { "background": "var(--primary-02)", "color": "var(--black)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "02", "colorNumbers": "80", "contrastColor": "var(--black)" },
-      { "background": "var(--primary-03)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "03", "colorNumbers": "24", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-04)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "04", "colorNumbers": "16", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-m)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "05", "colorNumbers": "0", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-06)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "06", "colorNumbers": "12", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-07)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "07", "colorNumbers": "24", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-08)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "08", "colorNumbers": "48", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-09)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "09", "colorNumbers": "64", "contrastColor": "var(--white)" },
-      { "background": "var(--primary-xx)", "color": "var(--white)", "contrast": "AAA", "hex": "#F6F9FF", "colorName": "xx", "colorNumbers": "80", "contrastColor": "var(--white)" }
+      { "background": "var(--positive-00)", "color": "var(--positive-m)", "contrast": "AAA", "hex": "#F5FCF7", "colorName": "00", "colorNumbers": "96", "contrastColor": "var(--black)" },
+      { "background": "var(--positive-01)", "color": "var(--positive-m)", "contrast": "AAA", "hex": "#E2F5E8", "colorName": "01", "colorNumbers": "88", "contrastColor": "var(--black)" },
+      { "background": "var(--positive-02)", "color": "var(--positive-m)", "contrast": "AAA", "hex": "#CFEED9", "colorName": "02", "colorNumbers": "80", "contrastColor": "var(--black)" },
+      { "background": "var(--positive-03)", "color": "var(--white)", "contrast": "AAA", "hex": "#47BE6F", "colorName": "03", "colorNumbers": "24", "contrastColor": "var(--white)" },
+      { "background": "var(--positive-04)", "color": "var(--white)", "contrast": "AAA", "hex": "#34B860", "colorName": "04", "colorNumbers": "16", "contrastColor": "var(--white)" },
+      { "background": "var(--positive-m)", "color": "var(--white)", "contrast": "AAA", "hex": "#0DAA42", "colorName": "M", "colorNumbers": "0", "contrastColor": "var(--white)" },
+      { "background": "var(--positive-06)", "color": "var(--white)", "contrast": "AAA", "hex": "#0B963A", "colorName": "06", "colorNumbers": "12", "contrastColor": "var(--white)" },
+      { "background": "var(--positive-07)", "color": "var(--white)", "contrast": "AAA", "hex": "#0A8132", "colorName": "07", "colorNumbers": "24", "contrastColor": "var(--white)" },
+      { "background": "var(--positive-08)", "color": "var(--white)", "contrast": "AAA", "hex": "#075822", "colorName": "08", "colorNumbers": "48", "contrastColor": "var(--white)" },
+      { "background": "var(--positive-09)", "color": "var(--white)", "contrast": "AAA", "hex": "#053D18", "colorName": "09", "colorNumbers": "64", "contrastColor": "var(--white)" },
+      { "background": "var(--positive-xx)", "color": "var(--white)", "contrast": "AAA", "hex": "#03220D", "colorName": "xx", "colorNumbers": "80", "contrastColor": "var(--white)" }
+    ],
+    "caution": [
+      { "background": "var(--caution-00)", "color": "var(--caution-m)", "contrast": "AAA", "hex": "#FFFBF5", "colorName": "00", "colorNumbers": "96", "contrastColor": "var(--black)" },
+      { "background": "var(--caution-01)", "color": "var(--caution-m)", "contrast": "AAA", "hex": "#FEF2E1", "colorName": "01", "colorNumbers": "88", "contrastColor": "var(--black)" },
+      { "background": "var(--caution-02)", "color": "var(--caution-m)", "contrast": "AAA", "hex": "#FDE9CE", "colorName": "02", "colorNumbers": "80", "contrastColor": "var(--black)" },
+      { "background": "var(--caution-03)", "color": "var(--white)", "contrast": "AAA", "hex": "#F9AB44", "colorName": "03", "colorNumbers": "24", "contrastColor": "var(--white)" },
+      { "background": "var(--caution-04)", "color": "var(--white)", "contrast": "AAA", "hex": "#F8A230", "colorName": "04", "colorNumbers": "16", "contrastColor": "var(--white)" },
+      { "background": "var(--caution-m)", "color": "var(--white)", "contrast": "AAA", "hex": "#F79009", "colorName": "M", "colorNumbers": "0", "contrastColor": "var(--white)" },
+      { "background": "var(--caution-06)", "color": "var(--white)", "contrast": "AAA", "hex": "#D97F08", "colorName": "06", "colorNumbers": "12", "contrastColor": "var(--white)" },
+      { "background": "var(--caution-07)", "color": "var(--white)", "contrast": "AAA", "hex": "#CF7908", "colorName": "07", "colorNumbers": "24", "contrastColor": "var(--white)" },
+      { "background": "var(--caution-08)", "color": "var(--white)", "contrast": "AAA", "hex": "#BC6D07", "colorName": "08", "colorNumbers": "48", "contrastColor": "var(--white)" },
+      { "background": "var(--caution-09)", "color": "var(--white)", "contrast": "AAA", "hex": "#593403", "colorName": "09", "colorNumbers": "64", "contrastColor": "var(--white)" },
+      { "background": "var(--caution-xx)", "color": "var(--white)", "contrast": "AAA", "hex": "#311D02", "colorName": "xx", "colorNumbers": "80", "contrastColor": "var(--white)" }
+    ],
+    "negative": [
+      { "background": "var(--negative-00)", "color": "var(--negative-m)", "contrast": "AAA", "hex": "#FCE4E4", "colorName": "00", "colorNumbers": "96", "contrastColor": "var(--black)" },
+      { "background": "var(--negative-01)", "color": "var(--negative-m)", "contrast": "AAA", "hex": "#FAD1D1", "colorName": "01", "colorNumbers": "88", "contrastColor": "var(--black)" },
+      { "background": "var(--negative-02)", "color": "var(--negative-m)", "contrast": "AAA", "hex": "#F28888", "colorName": "02", "colorNumbers": "80", "contrastColor": "var(--black)" },
+      { "background": "var(--negative-03)", "color": "var(--white)", "contrast": "AAA", "hex": "#EA3F3F", "colorName": "03", "colorNumbers": "24", "contrastColor": "var(--white)" },
+      { "background": "var(--negative-04)", "color": "var(--white)", "contrast": "AAA", "hex": "#E82C2C", "colorName": "04", "colorNumbers": "16", "contrastColor": "var(--white)" },
+      { "background": "var(--negative-m)", "color": "var(--white)", "contrast": "AAA", "hex": "#E61A1A", "colorName": "M", "colorNumbers": "0", "contrastColor": "var(--white)" },
+      { "background": "var(--negative-06)", "color": "var(--white)", "contrast": "AAA", "hex": "#C11616", "colorName": "06", "colorNumbers": "12", "contrastColor": "var(--white)" },
+      { "background": "var(--negative-07)", "color": "var(--white)", "contrast": "AAA", "hex": "#AF1414", "colorName": "07", "colorNumbers": "24", "contrastColor": "var(--white)" },
+      { "background": "var(--negative-08)", "color": "var(--white)", "contrast": "AAA", "hex": "#8A1010", "colorName": "08", "colorNumbers": "48", "contrastColor": "var(--white)" },
+      { "background": "var(--negative-09)", "color": "var(--white)", "contrast": "AAA", "hex": "#530909", "colorName": "09", "colorNumbers": "64", "contrastColor": "var(--white)" },
+      { "background": "var(--negative-xx)", "color": "var(--white)", "contrast": "AAA", "hex": "#2E0505", "colorName": "xx", "colorNumbers": "80", "contrastColor": "var(--white)" }
     ]
   }
   

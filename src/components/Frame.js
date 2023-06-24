@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from '../assets/midwell_logo.svg';
 import {
   BrowserRouter as Router,
   NavLink,
@@ -16,7 +17,16 @@ const Navigation = () => {
 
   return (
     <Router>
-      <div className="navigation">
+      
+      <div className="header">
+        <div className="container">
+          <NavLink to="/" className='logo'><img src={Logo}/></NavLink>
+        </div>
+    </div>
+      <div className='container'>
+        <div className='Grid'>
+
+        <div className="navigation">
         <div className="list">
             <div className="nav-head">Guides</div>
             <ul>
@@ -29,7 +39,7 @@ const Navigation = () => {
                         </ul>
                     </div>
                 </li>
-                {/* <li><NavLink to="/typography">Typography</NavLink></li> */}
+                <li><NavLink to="/typography">Typography</NavLink></li>
             </ul>
         </div>
         <div className="list">
@@ -44,6 +54,8 @@ const Navigation = () => {
         </div>
       </div>
       <Content />
+        </div>
+      </div>
     </Router>
   );
 };

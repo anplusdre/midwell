@@ -16,7 +16,9 @@ body,
 body {
   font-size: 14px;
   font-family: var(--typeface);
-  color: var(--grey);
+  min-height: 100%;
+  height: 100%;
+  color: var(--dark);
 }
 
 ul {
@@ -41,9 +43,12 @@ a {
 }
 
 .header {
+  position: sticky;
+  top: 0;
   padding: 20px 0;
   background: var(--dark-bg);
   border-bottom: 1px solid var(--black);
+  z-index: 3;
 }
 .header .logo {
   display: inline-flex;
@@ -61,7 +66,6 @@ a {
 
 .Content {
   width: 100%;
-  padding: 0 var(--g-24);
 }
 
 .container {
@@ -71,16 +75,19 @@ a {
 
 .navigation {
   position: sticky;
+  top: 89px;
+  height: calc(100vh - 6rem);
 }
 .navigation .list {
   margin-bottom: var(--g-24);
 }
 .navigation .nav-dropdown {
-  height: 0;
-  opacity: 0;
+  max-height: 0;
   flex-direction: column;
-  overflow: hidden;
-  transition: opacity 0.15s ease 0s, height 0.2s ease-in-out 0s;
+  transition: max-height 0.1s ease-out 0s;
+}
+.navigation .nav-dropdown ul {
+  margin: var(--g-4) var(--g-12);
 }
 .navigation .nav-dropdown ul li {
   margin: 0;
@@ -88,15 +95,15 @@ a {
 .navigation .nav-dropdown ul li a {
   position: relative;
   padding-left: var(--g-24);
-  border-left: 1px solid var(--grey-04);
+  border-left: 1px solid var(--black);
 }
 .navigation .nav-dropdown ul a.active {
-  border-left: 1px solid var(--primary-04);
+  border-left: 1px solid var(--primary-m);
+  font-weight: 500;
 }
 .navigation .nav-dropdown.open {
-  height: auto;
-  opacity: 1;
-  transition: opacity 0.15s ease 0s, height 0.2s ease-in-out 0s;
+  max-height: 500px;
+  transition: max-height 0.2s ease-in 0s;
 }
 .navigation ul li {
   position: relative;
@@ -105,7 +112,7 @@ a {
 }
 .navigation ul li a {
   font: var(--single-14-rg);
-  color: var(--grey-disable-strong);
+  color: var(--grey-04);
   padding: var(--g-6) var(--g-16);
   padding-left: 0;
   transition: color 0.02s ease-in-out;
@@ -135,14 +142,13 @@ a {
   background-position: center;
 }
 .navigation ul li .active {
-  color: var(--primary-04);
+  color: var(--primary-m);
+  font-weight: 500;
 }
 .navigation ul li .active:hover {
   color: var(--white);
-  font-weight: bold;
 }
 .navigation .nav-head {
-  font-size: 14px;
   line-height: var(--g-24);
   margin: 0 0 var(--g-12) 0;
   font-weight: 600;
@@ -154,28 +160,52 @@ a {
   flex-direction: column;
 }
 .colorPalette .cardTitle {
-  font-size: var(--g-24);
-  font-weight: bold;
   color: var(--white);
+  display: flex;
+  align-items: center;
+  font-size: var(--g-18);
+  font-weight: 500;
   margin-bottom: var(--g-8);
+}
+.colorPalette .baseIcon,
+.colorPalette .prmIcon,
+.colorPalette .posIcon,
+.colorPalette .grIcon {
+  width: var(--g-12);
+  height: var(--g-12);
+  margin-right: var(--g-12);
+  border-radius: var(--g-4);
+  border: 1px solid var(--grey-stroke);
+}
+.colorPalette .baseIcon {
+  background: var(--white);
+}
+.colorPalette .grIcon {
+  background: var(--grey-m);
+}
+.colorPalette .prmIcon {
+  background: var(--primary-m);
+}
+.colorPalette .posIcon {
+  background: var(--positive-m);
 }
 .colorPalette .cardSubTitle {
   margin-bottom: var(--g-24);
-  color: var(--grey);
+  color: var(--grey-04);
 }
 .colorPalette .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: var(--g-16);
-  margin-bottom: var(--g-40);
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: var(--g-16);
+  grid-row-gap: var(--g-24);
+  margin-bottom: var(--g-48);
 }
 .colorPalette .cardsGrid .cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: var(--g-8);
-  border: 1px solid var(--black);
+  overflow: hidden;
 }
 .colorPalette .cardsGrid .cards .colorBox,
 .colorPalette .cardsGrid .cards .colorInfo {
@@ -186,16 +216,16 @@ a {
   justify-content: center;
 }
 .colorPalette .cardsGrid .cards .colorBox {
+  display: block;
   position: relative;
-  padding: var(--g-32) 0 var(--g-24) 0;
-  border-top-left-radius: var(--g-8);
-  border-top-right-radius: var(--g-8);
-  align-items: center;
+  text-align: center;
+  padding: var(--g-24) 0;
+  border-radius: var(--g-8);
 }
 .colorPalette .cardsGrid .cards .colorBox .colorName {
   font-size: var(--g-16);
   font-weight: 500;
-  line-height: var(--g-32);
+  line-height: var(--g-24);
 }
 .colorPalette .cardsGrid .cards .colorBox .contrastCheck {
   position: absolute;
@@ -206,19 +236,24 @@ a {
 .colorPalette .cardsGrid .cards .colorBox .overlay {
   opacity: 0;
   position: absolute;
+  z-index: 2;
   width: 100%;
   height: 100%;
   top: 0;
   display: flex;
+  flex-direction: column;
+  gap: var(--g-8);
   justify-content: center;
   align-items: center;
   background: var(--cards-bg);
-  border-top-left-radius: var(--g-6);
-  border-top-right-radius: var(--g-6);
+  border-radius: var(--g-6);
   transition: all 0.2s ease-in-out;
 }
+.colorPalette .cardsGrid .cards .colorBox .overlay .colorHex {
+  width: 100%;
+}
 .colorPalette .cardsGrid .cards .colorBox .overlay img {
-  height: var(--g-24);
+  height: var(--g-20);
 }
 .colorPalette .cardsGrid .cards .colorBox .overlay:hover {
   opacity: 1;
@@ -226,17 +261,140 @@ a {
 .colorPalette .cardsGrid .cards .colorInfo {
   gap: 8px;
   align-self: stretch;
-  padding: var(--pd-smd-smd);
+  text-align: center;
 }
 .colorPalette .cardsGrid .cards .colorInfo .colorNumbers,
 .colorPalette .cardsGrid .cards .colorInfo .colorHex {
   font-size: 14px;
 }
 .colorPalette .cardsGrid .cards .colorInfo .colorNumbers {
+  position: relative;
+  color: var(--white);
+  padding-top: var(--g-12);
+}
+.colorPalette .cardsGrid .cards .colorInfo .colorNumbers .overlay {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: var(--g-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-8);
+  justify-content: center;
+  align-items: center;
+  background: var(--cards-bg);
+  border-radius: var(--g-6);
+  transition: all 0.2s ease-in-out;
+}
+.colorPalette .cardsGrid .cards .colorInfo .colorNumbers .overlay:hover {
+  opacity: 1;
+}
+.colorPalette .cardsGrid .cards .colorInfo .colorNumbers .overlay::after {
+  content: "";
+  background-image: url(./assets/copy_small.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.colorPalette .cardsGrid .cards .colorInfo .colorNumbers .overlay img {
+  height: var(--g-20);
+}
+
+.ctWr {
+  display: grid;
+  grid-row-gap: var(--g-40);
+}
+.ctWr .ctHd {
+  display: grid;
+  grid-row-gap: var(--g-16);
+}
+.ctWr .ctHd .ctTl {
+  font-size: var(--g-32);
   color: var(--white);
 }
-.colorPalette .cardsGrid .cards .colorInfo .colorHex {
-  font: var(--single-14-rg);
-  color: var(--grey);
-  text-transform: uppercase;
+.ctWr .ctHd .ctSt {
+  color: var(--grey-04);
+  font-size: var(--g-16);
+  line-height: var(--paragraph);
+}
+
+.copyIcon {
+  background: url(./assets/copy.svg) center no-repeat;
+  height: var(--g-16);
+  width: var(--g-16);
+}
+
+.codeBlock {
+  width: 100%;
+}
+.codeBlock .codeBlockWrapper {
+  border: 1px solid var(--black);
+  border-radius: var(--g-8);
+}
+.codeBlock .codeBlockHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--pd-md-md);
+  color: var(--white);
+  border-bottom: 1px solid var(--black);
+}
+.codeBlock .codeBlockHeader svg:hover > .copypath {
+  stroke: var(--primary-03);
+}
+.codeBlock .codeBlockHeader .copypath {
+  transition: stroke 0.02s ease-in-out;
+}
+.codeBlock .codeBlockHeader .codeAction {
+  display: flex;
+  gap: var(--g-8);
+  align-items: center;
+}
+.codeBlock .codeBlockHeader .codeAction .iconBox {
+  display: flex;
+  align-self: center;
+  padding: var(--g-6);
+  border-radius: var(--g-4);
+  transition: background-color 0.1s ease-in-out;
+  background: rgba(255, 255, 255, 0.24);
+}
+.codeBlock .codeBlockHeader .codeAction .iconBox:hover {
+  background: var(--white);
+}
+.codeBlock .codeBlockHeader .codeAction .iconBox:hover > svg > .iconStyle {
+  stroke: var(--dark-bg);
+}
+.codeBlock .codeBlockHeader .codeAction .iconBox .iconStyle {
+  transition: stroke 0.1s ease-in-out;
+}
+.codeBlock span {
+  background: none !important;
+}
+.codeBlock .token.hexcode,
+.codeBlock .token.punctuation,
+.codeBlock .token.psuedo-class {
+  color: var(--white);
+}
+.codeBlock .token {
+  color: var(--white);
+  line-height: var(--g-24);
+}
+.codeBlock .pseudo-class {
+  margin-bottom: var(--g-12);
+}
+.codeBlock code {
+  color: var(--white);
+  width: 100%;
+  background: var(--dark);
+  padding: var(--pd-md-md) !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: var(--g-8);
+  border-bottom-right-radius: var(--g-8);
+}
+.codeBlock .react-syntax-highlighter-line-number {
+  color: var(--grey-06);
 }/*# sourceMappingURL=main.css.map */

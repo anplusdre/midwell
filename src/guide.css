@@ -4,6 +4,8 @@
   --g-8: 8px;
   --g-12: 12px;
   --g-16: 16px;
+  --g-18: 18px;
+  --g-20: 20px;
   --g-24: 24px;
   --g-32: 32px;
   --g-40: 40px;
@@ -16,10 +18,12 @@
   --center-hr: 0 auto;
   --typeface: "Proxima Nova", Georgia, sans-serif;
   --single-14-rg: normal normal normal 14px/16px var(--typeface);
+  --pd-sm-sm: var(--g-8) var(--g-8);
   --pd-sm-md: var(--g-8) var(--g-16);
   --pd-md-md: var(--g-16) var(--g-16);
   --pd-smd-smd: var(--g-12) var(--g-12);
   --pd-smd-md: var(--g-12) var(--g-16);
+  --paragraph: 150%;
 }
 
 *,
