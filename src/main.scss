@@ -396,15 +396,23 @@ a {
     width: 100%;
 
     .codeBlockWrapper {
+        background: var(--dark);
         border: 1px solid var(--black);
         border-radius: var(--g-8);
     }
 
+    code {
+        padding: 0;
+    }
+
     .codeBlockHeader {
+        border-top-left-radius: var(--g-8);
+        border-top-right-radius: var(--g-8);
+        background: var(--dark-bg);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: var(--pd-md-md);
+        padding: var(--pd-smd-md);
         color: var(--white);
         border-bottom: 1px solid var(--black);
 
@@ -456,8 +464,11 @@ a {
     }
 
     .token {
-        color: var(--white);
         line-height: var(--g-24);
+    }
+
+    .property {
+        color: var(--primary-03);
     }
 
     .pseudo-class {
@@ -465,7 +476,6 @@ a {
     }
 
     code {
-        color: var(--white);
         width: 100%;
         background: var(--dark);
         padding: var(--pd-md-md) !important;
@@ -478,4 +488,8 @@ a {
     .react-syntax-highlighter-line-number {
         color: var(--grey-06);
     }
+}
+
+.whiteText {
+    color: var(--white);
 }

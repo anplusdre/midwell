@@ -24,11 +24,15 @@
   --pd-smd-smd: var(--g-12) var(--g-12);
   --pd-smd-md: var(--g-12) var(--g-16);
   --paragraph: 150%;
+  --radius-4: var(--g-4);
+  --radius-8: var(--g-4);
 }
 
 *,
-::after,
-::before {
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -70,4 +74,11 @@ h5 {
 h6 {
   font-size: var(--g-24);
   line-height: var(--g-32);
+}
+
+code {
+  padding: 2px var(--g-6);
+  background: var(--black);
+  border-radius: var(--radius-4);
+  white-space: pre-wrap;
 }/*# sourceMappingURL=guide.css.map */

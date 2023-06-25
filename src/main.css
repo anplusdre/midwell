@@ -331,14 +331,21 @@ a {
   width: 100%;
 }
 .codeBlock .codeBlockWrapper {
+  background: var(--dark);
   border: 1px solid var(--black);
   border-radius: var(--g-8);
 }
+.codeBlock code {
+  padding: 0;
+}
 .codeBlock .codeBlockHeader {
+  border-top-left-radius: var(--g-8);
+  border-top-right-radius: var(--g-8);
+  background: var(--dark-bg);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--pd-md-md);
+  padding: var(--pd-smd-md);
   color: var(--white);
   border-bottom: 1px solid var(--black);
 }
@@ -379,14 +386,15 @@ a {
   color: var(--white);
 }
 .codeBlock .token {
-  color: var(--white);
   line-height: var(--g-24);
+}
+.codeBlock .property {
+  color: var(--primary-03);
 }
 .codeBlock .pseudo-class {
   margin-bottom: var(--g-12);
 }
 .codeBlock code {
-  color: var(--white);
   width: 100%;
   background: var(--dark);
   padding: var(--pd-md-md) !important;
@@ -397,4 +405,8 @@ a {
 }
 .codeBlock .react-syntax-highlighter-line-number {
   color: var(--grey-06);
+}
+
+.whiteText {
+  color: var(--white);
 }/*# sourceMappingURL=main.css.map */

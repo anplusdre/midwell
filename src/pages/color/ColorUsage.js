@@ -1,6 +1,7 @@
 import React from 'react';
-import { CodeBlock, monokaiSublime } from 'react-code-blocks';
+import { CodeBlock, dracula } from 'react-code-blocks';
 import Palette from '../codes/Headings'
+import Color from './Color';
 
 const ColorUsage = () => {
   return (
@@ -8,15 +9,16 @@ const ColorUsage = () => {
       <div className='colorUsage'>
       <div className='ctWr'>
       <div className='ctHd'>
-        <div className='ctTl'>Typography</div>
+        <div className='ctTl'>Usage</div>
         <div className='ctSt'>
-          Midwell comprehensive documentation and examples for typography, covering various aspects such as global settings, headings, body text, lists, and more. It offers a wide range of typographic styles and utilities to enhance the visual appeal and readability of your web pages.
+          To implement this color palette on your project, you must first create a css for it. For example create a css file and name it&nbsp; <code className='whiteText'>color.css</code>.
+          <p>and then copy the code below and paste it there. Or you can download <code className='whiteText'>color.css</code> from download button below.</p>
         </div>
         <div className='ctBd'>
           <div className='codeBlock'>
             <pre className='codeBlockWrapper'>
               <div className='codeBlockHeader'>
-                CSS
+                color.css
                 <div className='codeAction'>
                   <div className='iconBox'>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +32,7 @@ const ColorUsage = () => {
                   </div>
                 </div>
               </div>
-              <CodeBlock text={Palette} language="css" showLineNumbers={false} theme={monokaiSublime} />
+              <CodeBlock text={Palette} language="css" showLineNumbers={false} theme={dracula} />
             </pre>
           </div>
         </div>
