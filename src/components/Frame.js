@@ -20,7 +20,10 @@ const Navigation = () => {
       
       <div className="header">
         <div className="container">
-          <NavLink to="/" className='logo'><img src={Logo}/></NavLink>
+          <div className='identityBar'>
+            <NavLink to="/" className='logo'><img src={Logo}/></NavLink>
+            <div>Powered by Deltadata Mandiri</div>
+          </div>
         </div>
     </div>
       <div className='container'>
@@ -34,8 +37,8 @@ const Navigation = () => {
                 <li><NavLink to="/color" activeclassname="active" className={`hasDropDown ${isDropdownOpen ? 'down' : 'right'}`} onClick={handleDropdownToggle}>Colors</NavLink>
                     <div className={`nav-dropdown ${isDropdownOpen ? 'open down' : ''}`}>
                         <ul>
-                            <li><NavLink to="/shadetint">Shade & Tint</NavLink></li>
-                            <li><NavLink to="/colorusage">Usage</NavLink></li>
+                            <li><NavLink to="/color/colorusage">Usage</NavLink></li>
+                            <li><NavLink to="/color/shadetint">Shade & Tint</NavLink></li>
                         </ul>
                     </div>
                 </li>
@@ -45,7 +48,7 @@ const Navigation = () => {
         <div className="list">
             <div className="nav-head">Components</div>
             <ul>
-                <li><NavLink to="/buttons">Buttons</NavLink></li>
+                <li><NavLink to="/components/buttons">Buttons</NavLink></li>
                 <li><NavLink to="/labels">Labels</NavLink>
                 </li>
                 <li><NavLink to="/checkboxes">Checkboxes</NavLink></li>

@@ -1,0 +1,153 @@
+{
+    "basePalette": {
+        "title": "Sizes",
+        "description": "Buttons sizes table information",
+        "buttons": [
+            {
+                "visual": "btn sm sl pm",
+                "size": "sm (32)    ",
+                "style": "sl (solid)",
+                "color": "pm (primary)",
+                "html": "className='btn sm sl pm'"
+            },
+            {
+                "visual": "btn smd sl pm",
+                "size": "smd (36)    ",
+                "style": "sl (solid)",
+                "color": "pm (primary)",
+                "html": "className='btn smd sl pm'"
+            },
+            {
+                "visual": "btn md sl pm",
+                "size": "md (40)    ",
+                "style": "sl (solid)",
+                "color": "pm (primary)",
+                "html": "className='btn md sl pm'"
+            },
+            {
+                "visual": "btn xl sl pm",
+                "size": "xl (48)    ",
+                "style": "sl (solid)",
+                "color": "pm (primary)",
+                "html": "className='btn xl sl pm'"
+            }
+        ]
+    },
+    "greyPalette": {
+        "title": "Grey Palette",
+        "banner": "./assets/Grey-Hero.png",
+        "description": "Grey Palette is mostly used for a background, an outline, or a text that has a secondary position in hierarchy such as sub-title and a description.",
+        "buttons": [
+            {
+                "labels": [
+                    "Body Text",
+                    "Helper Text"
+                ],
+                "colorCode": "var(--grey)",
+                "hex": "#81848A",
+                "name": "Grey",
+                "rootClass": "var(--grey)"
+            },
+            {
+                "labels": [
+                    "Body Text",
+                    "Helper Text"
+                ],
+                "colorCode": "var(--grey-02)",
+                "hex": "#66686D",
+                "name": "Grey 02",
+                "rootClass": "var(--grey-02)"
+            },
+            {
+                "labels": [
+                    "Body Text",
+                    "Helper Text"
+                ],
+                "colorCode": "var(--grey-03)",
+                "hex": "#434548",
+                "name": "Grey 03",
+                "rootClass": "var(--grey-03)"
+            },
+            {
+                "labels": [
+                    "Body Text",
+                    "Helper Text"
+                ],
+                "colorCode": "var(--grey-04)",
+                "hex": "#37393B",
+                "name": "Grey 04",
+                "rootClass": "var(--grey-04)"
+            }
+        ]
+    },
+    "AccPalette": {
+        "title": "Accent Palette",
+        "banner": "./assets/Prm-Hero.png",
+        "description": "Primary palette esentially the accent color of the desing system, it was use for many elements which require the user to pay attention to and it had to be the same color used for the product's identity",
+        "buttons": [
+            {
+                "labels": [
+                    "Accent Color",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--primary-05)",
+                "hex": "#F6F9FF",
+                "name": "Primary 05",
+                "rootClass": "var(--primary-05)"
+            },
+            {
+                "labels": [
+                    "Accent Color",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--secondary)",
+                "hex": "#F12BAA",
+                "name": "Secondary",
+                "rootClass": "var(--secondary)"
+            }
+        ]
+    },
+    "SemPalette": {
+        "title": "Semantic Palette",
+        "banner": "./assets/Prm-Hero.png",
+        "description": "This palette are acting as a helper in a some cases, a case that requires a color that resembles real life situation like positive, warning, and negative. ",
+        "buttons": [
+            {
+                "labels": [
+                    "Positives",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--positive-05)",
+                "hex": "#0DAA42",
+                "name": "Positive",
+                "rootClass": "var(--positive-05)"
+            },
+            {
+                "labels": [
+                    "Cautious",
+                    "Warnings",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--caution-05)",
+                "hex": "#F79009",
+                "name": "Caution",
+                "rootClass": "var(--caution-05)"
+            },
+            {
+                "labels": [
+                    "Negatives",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--negative-05)",
+                "hex": "#E61A1A",
+                "name": "Negative",
+                "rootClass": "var(--negative-05)"
+            }
+        ]
+    }
+}

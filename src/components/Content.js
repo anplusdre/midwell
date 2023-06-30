@@ -3,11 +3,12 @@ import Home from '../pages/Home';
 import Color from '../pages/color/Color';
 import ShadeTint from '../pages/color/ShadeTint';
 import ColorUsage from '../pages/color/ColorUsage';
-import Typography from '../pages/Typography';
+import Typography from '../pages/typography/Typography';
 import {
   Routes,
   Route,
 } from "react-router-dom";
+import ButtonsComp from '../pages/comp/buttons/ButtonsComp';
 
 const Content = () => {
   return (
@@ -15,9 +16,11 @@ const Content = () => {
         <Routes>
             <Route path="/" element={<Home />} ></Route>
             <Route path="/color" element={<Color />} ></Route>
-            <Route path="/shadetint" element={<ShadeTint />} ></Route>
-            <Route path="/colorusage" element={<ColorUsage />} ></Route>
+            <Route path="/color/shadetint" element={<ShadeTint />} ></Route>
+            <Route path="/color/colorusage" element={<ColorUsage />} ></Route>
             <Route path="/typography" element={<Typography />} ></Route>
+            <Route path="/comp"></Route>
+            <Route path="/components/buttons" element={<ButtonsComp />} ></Route>
         </Routes>
   </div>
   );

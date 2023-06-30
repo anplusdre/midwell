@@ -1,6 +1,6 @@
 import React from 'react';
 import copyIcon from '../../assets/copy.svg';
-import colors from './palette.json';
+import colors from './Colorpalette.json';
 import CopyToClipboard from '../../components/CopyClipboard'
 
 const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers, contrastColor }) => {
@@ -31,7 +31,7 @@ const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers, 
 };
 
 const ShadeTint = () => {
-  const { base, grey, primary, positive, caution, negative, } = colors;
+  const { base, grey, primary, secondary, positive, caution, negative, } = colors;
 
   return (
     <>
@@ -56,6 +56,14 @@ const ShadeTint = () => {
         <div className='cardSubTitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         <div className='cardsGrid'>
           {primary.map((color, index) => (
+            <ColorCard key={index} {...color} />
+          ))}
+        </div>
+
+        <div className='cardTitle'><div className='secIcon'></div>Secondary Color</div>
+        <div className='cardSubTitle'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div className='cardsGrid'>
+          {secondary.map((color, index) => (
             <ColorCard key={index} {...color} />
           ))}
         </div>

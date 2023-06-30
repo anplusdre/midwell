@@ -1,4 +1,5 @@
-:root {
+
+const Palette = `:root {
     --white: #FFFFFF;
     --black: #2C2D2F;
     --dark: #151516;
@@ -24,8 +25,6 @@
     --primary-08: #0F3485;
     --primary-09: #0A245C;
     --primary-xx: #061433;
-
-    --secondary: #F12BAA;
 
     --positive-00: #F5FCF7;
     --positive-01: #E2F5E8;
@@ -63,4 +62,6 @@
     --negative-09: #530909;
     --negative-xx: #2E0505;
 
-}
+}`;
+
+export default Palette;

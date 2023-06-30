@@ -1,0 +1,186 @@
+{
+    "basePalette": {
+        "title": "Base Palette",
+        "banner": "./assets/Base-Hero.png",
+        "description": "Base Colors are mostly used for textual content or a background, it was taken sequentally from 'Grey' palette and grey palette was taken sequentially from Primary color.",
+        "colors": [
+            {
+                "labels": [
+                    "Headings",
+                    "Titles",
+                    "Body Text"
+                ],
+                "colorCode": "var(--dark)",
+                "hex": "#151516",
+                "name": "Dark",
+                "rootClass": "var(--dark)"
+            },
+            {
+                "labels": [
+                    "Titles",
+                    "Body Text",
+                    "Paragraph"
+                ],
+                "colorCode": "var(--black)",
+                "hex": "#2C2D2F",
+                "name": "Black",
+                "rootClass": "var(--black)"
+            },
+            {
+                "labels": [
+                    "Background",
+                    "Text"
+                ],
+                "colorCode": "var(--white)",
+                "hex": "#FFFFFF",
+                "name": "White",
+                "rootClass": "var(--white)"
+            },
+            {
+                "labels": [
+                    "Soft Background"
+                ],
+                "colorCode": "var(--fade)",
+                "hex": "#F5F5F6",
+                "name": "Fade",
+                "rootClass": "var(--fade)"
+            },
+            {
+                "labels": [
+                    "Borders"
+                ],
+                "colorCode": "var(--stroke)",
+                "hex": "#E2E3E4",
+                "name": "Stroke",
+                "rootClass": "var(--stroke)"
+            },
+            {
+                "labels": [
+                    "Disables",
+                    "Background"
+                ],
+                "colorCode": "var(--disable)",
+                "hex": "#DCDDDE",
+                "name": "Disable",
+                "rootClass": "var(--disable)"
+            }
+        ]
+    },
+    "greyPalette": {
+        "title": "Grey Palette",
+        "banner": "./assets/Grey-Hero.png",
+        "description": "Grey Palette is mostly used for a background, an outline, or a text that has a secondary position in hierarchy such as sub-title and a description.",
+        "colors": [
+            {
+                "labels": [
+                    "Body Text",
+                    "Helper Text"
+                ],
+                "colorCode": "var(--grey)",
+                "hex": "#81848A",
+                "name": "Grey",
+                "rootClass": "var(--grey)"
+            },
+            {
+                "labels": [
+                    "Body Text",
+                    "Helper Text"
+                ],
+                "colorCode": "var(--grey-02)",
+                "hex": "#66686D",
+                "name": "Grey 02",
+                "rootClass": "var(--grey-02)"
+            },
+            {
+                "labels": [
+                    "Body Text",
+                    "Helper Text"
+                ],
+                "colorCode": "var(--grey-03)",
+                "hex": "#434548",
+                "name": "Grey 03",
+                "rootClass": "var(--grey-03)"
+            },
+            {
+                "labels": [
+                    "Body Text",
+                    "Helper Text"
+                ],
+                "colorCode": "var(--grey-04)",
+                "hex": "#37393B",
+                "name": "Grey 04",
+                "rootClass": "var(--grey-04)"
+            }
+        ]
+    },
+    "AccPalette": {
+        "title": "Accent Palette",
+        "banner": "./assets/Prm-Hero.png",
+        "description": "Primary palette esentially the accent color of the desing system, it was use for many elements which require the user to pay attention to and it had to be the same color used for the product's identity",
+        "colors": [
+            {
+                "labels": [
+                    "Accent Color",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--primary-05)",
+                "hex": "#F6F9FF",
+                "name": "Primary 05",
+                "rootClass": "var(--primary-05)"
+            },
+            {
+                "labels": [
+                    "Accent Color",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--secondary)",
+                "hex": "#F12BAA",
+                "name": "Secondary",
+                "rootClass": "var(--secondary)"
+            }
+        ]
+    },
+    "SemPalette": {
+        "title": "Semantic Palette",
+        "banner": "./assets/Prm-Hero.png",
+        "description": "This palette are acting as a helper in a some cases, a case that requires a color that resembles real life situation like positive, warning, and negative. ",
+        "colors": [
+            {
+                "labels": [
+                    "Positives",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--positive-05)",
+                "hex": "#0DAA42",
+                "name": "Positive",
+                "rootClass": "var(--positive-05)"
+            },
+            {
+                "labels": [
+                    "Cautious",
+                    "Warnings",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--caution-05)",
+                "hex": "#F79009",
+                "name": "Caution",
+                "rootClass": "var(--caution-05)"
+            },
+            {
+                "labels": [
+                    "Negatives",
+                    "Buttons",
+                    "Backgrounds"
+                ],
+                "colorCode": "var(--negative-05)",
+                "hex": "#E61A1A",
+                "name": "Negative",
+                "rootClass": "var(--negative-05)"
+            }
+        ]
+    }
+}

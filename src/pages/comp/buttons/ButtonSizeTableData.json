@@ -1,0 +1,18 @@
+{
+    "sizes": [
+        {
+            "class": "xs",
+            "height": "32",
+            "vertical": "8",
+            "horizontal": "12",
+            "html": "btn xs"
+        },
+        {
+            "class": "sm",
+            "height": "36",
+            "vertical": "y = 10",
+            "horizontal": "x = 12",
+            "html": "btn xs"
+        }
+    ]
+}

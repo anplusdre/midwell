@@ -1,5 +1,15 @@
 @import './color.css';
 @import './guide.css';
+@import './fonts/fonts.css';
+:root {
+  --dark-bg: #040508;
+  --dark-bg-02: #1a1b1e;
+  --cards-bg: #222326;
+  --border: 1px solid;
+  --grad: linear-gradient(to right, var(--primary-05), #F12BAA, var(--caution-05));
+  --grad-full: linear-gradient(to right, var(--white), var(--primary-05), #F12BAA, var(--caution-05), var(--positive-05), var(--negative-05), var(--white), ) ;
+}
+
 html,
 body,
 .App {
@@ -11,6 +21,8 @@ body,
 
 .dark {
   background: var(--dark-bg);
+  color: var(--white);
+  font: var(--single-14-rg);
 }
 
 body {
@@ -19,6 +31,21 @@ body {
   min-height: 100%;
   height: 100%;
   color: var(--dark);
+}
+
+body::-webkit-scrollbar {
+  width: var(--g-12);
+  background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--white);
+  border: var(--border) var(--black);
 }
 
 ul {
@@ -47,13 +74,20 @@ a {
   top: 0;
   padding: 20px 0;
   background: var(--dark-bg);
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid;
+  border-color: var(--black);
   z-index: 3;
 }
-.header .logo {
+.header .identityBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--disable-02);
+}
+.header .identityBar .logo {
   display: inline-flex;
 }
-.header .logo img {
+.header .identityBar .logo img {
   height: 20px;
 }
 
@@ -84,6 +118,7 @@ a {
 .navigation .nav-dropdown {
   max-height: 0;
   flex-direction: column;
+  overflow: hidden;
   transition: max-height 0.1s ease-out 0s;
 }
 .navigation .nav-dropdown ul {
@@ -95,10 +130,10 @@ a {
 .navigation .nav-dropdown ul li a {
   position: relative;
   padding-left: var(--g-24);
-  border-left: 1px solid var(--black);
+  border-left: var(--border) var(--black);
 }
 .navigation .nav-dropdown ul a.active {
-  border-left: 1px solid var(--primary-m);
+  border-left: var(--border) var(--primary-05);
   font-weight: 500;
 }
 .navigation .nav-dropdown.open {
@@ -112,7 +147,7 @@ a {
 }
 .navigation ul li a {
   font: var(--single-14-rg);
-  color: var(--grey-04);
+  color: var(--disable-02);
   padding: var(--g-6) var(--g-16);
   padding-left: 0;
   transition: color 0.02s ease-in-out;
@@ -124,6 +159,9 @@ a {
   display: flex;
   justify-content: space-between;
   vertical-align: middle;
+}
+.navigation ul li .hasDropDown.down.active {
+  color: var(--white);
 }
 .navigation ul li .right::after {
   content: "";
@@ -141,11 +179,11 @@ a {
   background-repeat: no-repeat;
   background-position: center;
 }
-.navigation ul li .active {
-  color: var(--primary-m);
+.navigation ul li a.active {
+  color: var(--primary-05);
   font-weight: 500;
 }
-.navigation ul li .active:hover {
+.navigation ul li a.active:hover {
   color: var(--white);
 }
 .navigation .nav-head {
@@ -175,23 +213,23 @@ a {
   height: var(--g-12);
   margin-right: var(--g-12);
   border-radius: var(--g-4);
-  border: 1px solid var(--grey-stroke);
+  border: var(--border) var(--stroke);
 }
 .colorPalette .baseIcon {
   background: var(--white);
 }
 .colorPalette .grIcon {
-  background: var(--grey-m);
+  background: var(--grey);
 }
 .colorPalette .prmIcon {
-  background: var(--primary-m);
+  background: var(--primary-05);
 }
 .colorPalette .posIcon {
-  background: var(--positive-m);
+  background: var(--positive-05);
 }
 .colorPalette .cardSubTitle {
   margin-bottom: var(--g-24);
-  color: var(--grey-04);
+  color: var(--disable-02);
 }
 .colorPalette .cardsGrid {
   display: grid;
@@ -305,20 +343,51 @@ a {
 
 .ctWr {
   display: grid;
-  grid-row-gap: var(--g-40);
+  grid-row-gap: var(--g-24);
 }
 .ctWr .ctHd {
   display: grid;
   grid-row-gap: var(--g-16);
 }
 .ctWr .ctHd .ctTl {
-  font-size: var(--g-32);
-  color: var(--white);
+  font-weight: 500;
+  font-size: var(--g-48);
+  line-height: var(--g-56);
+  background: var(--white);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ctWr .ctHd .ctTl strong {
+  font-size: 20px;
+}
+.ctWr .ctHd p {
+  font-size: var(--g-16);
 }
 .ctWr .ctHd .ctSt {
-  color: var(--grey-04);
+  color: var(--disable-02);
   font-size: var(--g-16);
   line-height: var(--paragraph);
+}
+.ctWr .ctBd {
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-64);
+  margin-bottom: var(--g-40);
+  padding-top: var(--g-40);
+}
+.ctWr .ctBd p {
+  color: var(--white);
+  font: var(--single-16-rg);
+}
+.ctWr .ctBd span {
+  background: none !important;
+}
+.ctWr .ctBd:first-child {
+  border-top: 0;
+}
+.ctWr .ctTl h6 {
+  font-weight: 500;
 }
 
 .copyIcon {
@@ -330,10 +399,15 @@ a {
 .codeBlock {
   width: 100%;
 }
+.codeBlock .examples {
+  background: var(--dark-bg);
+  padding: var(--g-24);
+  border-bottom: 1px solid var(--black);
+}
 .codeBlock .codeBlockWrapper {
   background: var(--dark);
-  border: 1px solid var(--black);
-  border-radius: var(--g-8);
+  border: var(--border) var(--black);
+  border-radius: var(--g-6);
 }
 .codeBlock code {
   padding: 0;
@@ -341,13 +415,13 @@ a {
 .codeBlock .codeBlockHeader {
   border-top-left-radius: var(--g-8);
   border-top-right-radius: var(--g-8);
-  background: var(--dark-bg);
+  background: var(--dark);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--pd-smd-md);
-  color: var(--white);
-  border-bottom: 1px solid var(--black);
+  color: var(--disable-02);
+  border-bottom: var(--border) var(--black);
 }
 .codeBlock .codeBlockHeader svg:hover > .copypath {
   stroke: var(--primary-03);
@@ -357,25 +431,17 @@ a {
 }
 .codeBlock .codeBlockHeader .codeAction {
   display: flex;
-  gap: var(--g-8);
+  gap: var(--g-12);
   align-items: center;
 }
-.codeBlock .codeBlockHeader .codeAction .iconBox {
-  display: flex;
-  align-self: center;
-  padding: var(--g-6);
-  border-radius: var(--g-4);
-  transition: background-color 0.1s ease-in-out;
-  background: rgba(255, 255, 255, 0.24);
-}
-.codeBlock .codeBlockHeader .codeAction .iconBox:hover {
-  background: var(--white);
-}
-.codeBlock .codeBlockHeader .codeAction .iconBox:hover > svg > .iconStyle {
-  stroke: var(--dark-bg);
-}
-.codeBlock .codeBlockHeader .codeAction .iconBox .iconStyle {
-  transition: stroke 0.1s ease-in-out;
+.codeBlock .hollow {
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  font-family: var(--typeface);
+  font: var(--single-16-rg);
+  font-weight: 500;
+  color: var(--white);
 }
 .codeBlock span {
   background: none !important;
@@ -396,7 +462,7 @@ a {
 }
 .codeBlock code {
   width: 100%;
-  background: var(--dark);
+  background: #090a0d;
   padding: var(--pd-md-md) !important;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -404,9 +470,83 @@ a {
   border-bottom-right-radius: var(--g-8);
 }
 .codeBlock .react-syntax-highlighter-line-number {
-  color: var(--grey-06);
+  color: var(--grey-02);
 }
 
 .whiteText {
   color: var(--white);
+}
+
+.iconBox {
+  padding: var(--g-4);
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  transition: background-color 0.2s ease-in-out;
+}
+.iconBox:hover > svg > .iconStyle {
+  stroke: var(--white);
+}
+.iconBox .iconStyle {
+  transition: stroke 0.2s ease-in-out;
+}
+
+.typography {
+  background: var(--dark-bg);
+  padding: var(--g-40) 0;
+}
+.typography .headingTypo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--g-32);
+}
+.typography .headingTypo h1,
+.typography .headingTypo h2,
+.typography .headingTypo h3,
+.typography .headingTypo h4,
+.typography .headingTypo h5 {
+  font-family: var(--typeface);
+  display: flex;
+  align-items: center;
+  line-height: var(--g-72);
+}
+.typography .headingTypo h1::before,
+.typography .headingTypo h2::before,
+.typography .headingTypo h3::before,
+.typography .headingTypo h4::before,
+.typography .headingTypo h5::before {
+  margin-right: var(--g-16);
+  font: var(--single-14-rg);
+  background: rgba(255, 255, 255, 0.08);
+  padding: var(--g-8);
+  border-radius: var(--g-4);
+  border: var(--border);
+  border-color: var(--black);
+}
+.typography .headingTypo h1::before {
+  content: "h1";
+}
+.typography .headingTypo h2::before {
+  content: "h2";
+}
+.typography .headingTypo h3::before {
+  content: "h3";
+}
+.typography .headingTypo h4::before {
+  content: "h4";
+}
+.typography .headingTypo h5::before {
+  content: "h5";
+}
+
+footer {
+  width: 100%;
+  border-top: var(--border) var(--black);
+  margin-top: 160px;
+  height: 480px;
+}
+
+.tableData pre.hollow code {
+  background: none;
 }/*# sourceMappingURL=main.css.map */
