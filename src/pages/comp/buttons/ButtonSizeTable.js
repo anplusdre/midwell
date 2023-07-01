@@ -2,7 +2,7 @@ import React from 'react';
 const ButtonSizeTable = ({sizes}) => {
   return (
     <div>
-      <table className='tables hollow darkTheme btm-32 top-24'>
+      <table className='tables hollow darkTheme'>
         <thead>
           <tr className='tableHead'>
             <th>Class</th>

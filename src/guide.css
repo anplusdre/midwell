@@ -17,8 +17,8 @@
   --g-80: 80px;
   --border-normal: 1px solid var(--stroke);
   --center-hr: 0 auto;
-  --single-14-rg: normal normal normal 14px/16px var(--typeface);
-  --single-16-rg: normal normal normal 16px/24px var(--typeface);
+  --single-14-rg: normal normal normal 14px/16px var(--vara);
+  --single-16-rg: normal normal normal 16px/24px var(--vara);
   --pd-sm-sm: var(--g-8) var(--g-8);
   --pd-sm-md: var(--g-8) var(--g-16);
   --pd-sm-smd: var(--g-8) var(--g-12);
@@ -26,6 +26,7 @@
   --pd-smd-smd: var(--g-12) var(--g-12);
   --pd-smd-md: var(--g-12) var(--g-16);
   --pd-md-lg: var(--g-16) var(--g-24);
+  --pd-lg-lg: var(--g-24) var(--g-24);
   --paragraph: 1.5;
   --radius-4: var(--g-4);
   --radius-8: var(--g-8);
@@ -84,7 +85,11 @@ h6 {
 hr {
   border-width: 1px;
   border-style: solid;
-  margin: var(--g-48) 0;
+  margin: var(--g-64) 0;
+}
+
+button {
+  all: unset;
 }
 
 code {
@@ -315,6 +320,7 @@ button {
   font-size: var(--g-14);
   line-height: var(--g-14);
   border: 1px solid;
+  background: transparent;
   border-color: transparent;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -325,12 +331,10 @@ button {
 .btn.sm,
 .btn.md {
   font-weight: inherit;
-  line-height: 1.029;
 }
 
 .btn.lg {
-  font: var(--single-14-rg);
-  font-weight: 500;
+  font-size: var(--g-16);
 }
 
 .btn.xs {
@@ -346,7 +350,7 @@ button {
 }
 
 .btn.lg {
-  padding: var(--pd-md-lg);
+  padding: var(--g-16) var(--g-16);
 }
 
 .btn.ol {
@@ -371,7 +375,7 @@ button {
   background: var(--black);
 }
 
-.btn.sl.pm {
+.btn.sl.primary {
   color: var(--white);
   background: var(--primary-05);
 }
@@ -406,12 +410,12 @@ button {
   color: var(--grey);
 }
 
-.btn.ol.pm {
+.btn.ol.primary {
   color: var(--primary-05);
   border-color: var(--primary-05);
 }
 
-.btn.fd.pm {
+.btn.fd.primary {
   color: var(--primary-05);
   background: var(--primary-01);
 }

@@ -3,16 +3,24 @@
     src: url("./fonts/Proxima\ Vara-VF.ttf");
     font-weight: 100 900;
 }
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url("./fonts/JetBrainsMono-VariableFont_wght.ttf");
+    font-weight: 100 800;
+}
+
 @import './color.css';
 @import './guide.css';
 // @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
-    --dark-bg: #040508;
+    --dark-bg: #191A1E;
     --dark-bg-02: #1a1b1e;
-    --cards-bg: #222326;
+    --cards-bg: #222327;
 
-    --typeface: 'Proxima Vara';
+    --vara: 'Proxima Vara';
+    --jetbrains: 'JetBrains Mono';
 
     --border: 1px solid;
     --grad: linear-gradient(to right, var(--primary-05), #F12BAA, var(--caution-05));
@@ -31,10 +39,6 @@ body,
     text-align: unset;
 }
 
-* {
-    font-family: var(--typeface);
-}
-
 .dark {
     background: var(--dark-bg);
     color: var(--white);
@@ -43,7 +47,7 @@ body,
 body {
     min-height: 100%;
     height: 100%;
-    color: var(--dark);
+    font-family: var(--vara);
 }
 
 body::-webkit-scrollbar {
@@ -66,7 +70,7 @@ p {
 }
 
 hr {
-    border-color: var(--dark);
+    border-color: var(--black);
 }
 
 ul {
@@ -88,6 +92,10 @@ a {
 
 .section {
     height: 100%;
+}
+
+code {
+    font-family: var(--jetbrains) !important;
 }
 
 .header {
@@ -445,9 +453,6 @@ a {
             font-weight: 500;
             font-size: var(--g-56);
             line-height: var(--g-64);
-            background: var(--white);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
 
             strong {
                 font-size: 20px;
@@ -498,27 +503,76 @@ a {
     width: var(--g-16);
 }
 
+.eTDmbk {
+    background: var(--dark) !important;
+    padding: var(--g-16) var(--g-12) !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .dEOhvB {
+        background: none !important;
+    }
+
+    span {
+        overflow: hidden;
+    }
+
+    .dEOhvB {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+}
+
+.callout {
+    border-left: 3px solid;
+    padding: var(--g-16);
+    margin: var(--g-24) 0;
+    line-height: 1.5;
+
+    code {
+        color: var(--white);
+        background: none;
+    }
+
+    .className {
+        color: var(--white);
+    }
+}
+
+.co-warning {
+    background: var(--caution-dark, var(--caution-05));
+    border-left-color: var(--caution-03);
+    color: var(--caution-03);
+
+    code {
+        color: var(--secondary-03);
+    }
+}
+
+.examples {
+    border: 1px dashed;
+    border-color: var(--grey-02);
+    border-radius: var(--radius-8);
+    padding: var(--g-24);
+}
+
 .codeBlock {
     width: 100%;
 
-    .examples {
-        background: #090a0d;
-        border-bottom: 1px dashed;
-        border-color: var(--black);
-        padding: var(--g-24);
-        padding-bottom: var(--g-16);
-    }
-
     .codeBlockWrapper {
-        background: var(--dark);
+        background: var(--cards-bg);
         border: var(--border) var(--black);
         border-radius: var(--g-6);
     }
 
     code {
         padding: 0;
+        font-size: var(--g-14) !important;
 
-        .token.attr-value{
+        .token.attr-value {
             color: var(--positive-03);
         }
     }
@@ -526,13 +580,20 @@ a {
     .codeBlockHeader {
         border-top-left-radius: var(--g-8);
         border-top-right-radius: var(--g-8);
-        background: var(--dark);
+        background: #1e1f23;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: var(--pd-smd-md);
         color: var(--disable-02);
         border-bottom: var(--border) var(--black);
+
+        .cBTitle {
+            display: flex;
+            flex-direction: row;
+            gap: var(--g-8);
+            align-items: center;
+        }
 
         svg:hover>.copypath {
             stroke: var(--primary-03);
@@ -583,9 +644,8 @@ a {
     }
 
     code {
-        width: 100%;
-        background: #090a0d;
-        padding: var(--pd-md-md) !important;
+        background: transparent;
+        padding: var(--pd-lg-lg) !important;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         border-bottom-left-radius: var(--g-8);
