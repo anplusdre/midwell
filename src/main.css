@@ -1,10 +1,15 @@
 @import './color.css';
 @import './guide.css';
-@import './fonts/fonts.css';
+@font-face {
+  font-family: "Proxima Vara";
+  src: url("./fonts/Proxima Vara-VF.ttf");
+  font-weight: 100 900;
+}
 :root {
   --dark-bg: #040508;
   --dark-bg-02: #1a1b1e;
   --cards-bg: #222326;
+  --typeface: "Proxima Vara";
   --border: 1px solid;
   --grad: linear-gradient(to right, var(--primary-05), #F12BAA, var(--caution-05));
   --grad-full: linear-gradient(to right, var(--white), var(--primary-05), #F12BAA, var(--caution-05), var(--positive-05), var(--negative-05), var(--white), ) ;
@@ -19,15 +24,16 @@ body,
   text-align: unset;
 }
 
+* {
+  font-family: var(--typeface);
+}
+
 .dark {
   background: var(--dark-bg);
   color: var(--white);
-  font: var(--single-14-rg);
 }
 
 body {
-  font-size: 14px;
-  font-family: var(--typeface);
   min-height: 100%;
   height: 100%;
   color: var(--dark);
@@ -46,6 +52,14 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--white);
   border: var(--border) var(--black);
+}
+
+p {
+  font-size: var(--g-16);
+}
+
+hr {
+  border-color: var(--dark);
 }
 
 ul {
@@ -189,8 +203,12 @@ a {
 .navigation .nav-head {
   line-height: var(--g-24);
   margin: 0 0 var(--g-12) 0;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--white);
+}
+
+.title {
+  margin-bottom: var(--g-8);
 }
 
 .colorPalette {
@@ -343,16 +361,18 @@ a {
 
 .ctWr {
   display: grid;
-  grid-row-gap: var(--g-24);
 }
 .ctWr .ctHd {
   display: grid;
   grid-row-gap: var(--g-16);
 }
+.ctWr .ctHd img {
+  margin-bottom: var(--g-48);
+}
 .ctWr .ctHd .ctTl {
   font-weight: 500;
-  font-size: var(--g-48);
-  line-height: var(--g-56);
+  font-size: var(--g-56);
+  line-height: var(--g-64);
   background: var(--white);
   -webkit-background-clip: text;
           background-clip: text;
@@ -360,9 +380,6 @@ a {
 }
 .ctWr .ctHd .ctTl strong {
   font-size: 20px;
-}
-.ctWr .ctHd p {
-  font-size: var(--g-16);
 }
 .ctWr .ctHd .ctSt {
   color: var(--disable-02);
@@ -372,9 +389,6 @@ a {
 .ctWr .ctBd {
   display: flex;
   flex-direction: column;
-  gap: var(--g-64);
-  margin-bottom: var(--g-40);
-  padding-top: var(--g-40);
 }
 .ctWr .ctBd p {
   color: var(--white);
@@ -385,6 +399,9 @@ a {
 }
 .ctWr .ctBd:first-child {
   border-top: 0;
+}
+.ctWr .ctBd .buttonSizes {
+  margin-top: var(--g-16);
 }
 .ctWr .ctTl h6 {
   font-weight: 500;
@@ -400,9 +417,11 @@ a {
   width: 100%;
 }
 .codeBlock .examples {
-  background: var(--dark-bg);
+  background: #090a0d;
+  border-bottom: 1px dashed;
+  border-color: var(--black);
   padding: var(--g-24);
-  border-bottom: 1px solid var(--black);
+  padding-bottom: var(--g-16);
 }
 .codeBlock .codeBlockWrapper {
   background: var(--dark);
@@ -411,6 +430,9 @@ a {
 }
 .codeBlock code {
   padding: 0;
+}
+.codeBlock code .token.attr-value {
+  color: var(--positive-03);
 }
 .codeBlock .codeBlockHeader {
   border-top-left-radius: var(--g-8);
@@ -438,7 +460,6 @@ a {
   border-left: none;
   border-right: none;
   border-radius: 0;
-  font-family: var(--typeface);
   font: var(--single-16-rg);
   font-weight: 500;
   color: var(--white);
@@ -506,7 +527,6 @@ a {
 .typography .headingTypo h3,
 .typography .headingTypo h4,
 .typography .headingTypo h5 {
-  font-family: var(--typeface);
   display: flex;
   align-items: center;
   line-height: var(--g-72);

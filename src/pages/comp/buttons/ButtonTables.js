@@ -1,3 +1,5 @@
+const ButtonStart = '<button className="btn">Button</button>'
+
 
 const ButtonSizes = `<button className="btn xs">X Small</button>
 <button className="btn sm">Small</button>
@@ -6,7 +8,7 @@ const ButtonSizes = `<button className="btn xs">X Small</button>
 `;
 
 const ButtonStyles = `<button className="btn sl">Solid</button>
-<button className="btn br">Border</button>
+<button className="btn ol">Outline</button>
 <button className="btn fd">Fade</button>
 <button className="btn gh">Ghost</button>
 `;
@@ -26,4 +28,4 @@ Right Icon </button>
 `;
 
 
-export default { ButtonSizes, ButtonStyles, ButtonColors, ButtonIcons };
+export default { ButtonSizes, ButtonStyles, ButtonColors, ButtonIcons, ButtonStart };

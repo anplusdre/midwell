@@ -17,9 +17,8 @@
   --g-80: 80px;
   --border-normal: 1px solid var(--stroke);
   --center-hr: 0 auto;
-  --typeface: "Proxima Nova", Georgia, sans-serif;
-  --single-14-rg: normal normal 300 14px/16px var(--typeface);
-  --single-16-rg: normal normal 300 16px/24px var(--typeface);
+  --single-14-rg: normal normal normal 14px/16px var(--typeface);
+  --single-16-rg: normal normal normal 16px/24px var(--typeface);
   --pd-sm-sm: var(--g-8) var(--g-8);
   --pd-sm-md: var(--g-8) var(--g-16);
   --pd-sm-smd: var(--g-8) var(--g-12);
@@ -38,10 +37,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: var(--typeface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -84,17 +81,34 @@ h6 {
   line-height: var(--g-32);
 }
 
+hr {
+  border-width: 1px;
+  border-style: solid;
+  margin: var(--g-48) 0;
+}
+
 code {
   padding: 2px var(--g-6);
   background: var(--black);
   border-radius: var(--radius-4);
   white-space: pre-wrap;
   font: var(--single-14-rg);
-  font-weight: 300;
 }
 
 p {
   line-height: 150%;
+}
+
+.pd-sm {
+  padding: var(--pd-sm-sm);
+}
+
+.pd-smd {
+  padding: var(--pd-smd-smd);
+}
+
+.pd-md {
+  padding: var(--pd-md-md);
 }
 
 .top-8 {
@@ -208,7 +222,6 @@ p {
 }
 .tables .tableHead th {
   font: var(--single-14-rg);
-  font-weight: 400;
   padding: var(--g-12) var(--g-12);
   text-align: left;
 }
@@ -268,7 +281,6 @@ p {
 }
 .labels .label {
   border-radius: var(--g-6);
-  font-weight: 300;
   font-size: var(--g-14);
 }
 
@@ -299,7 +311,6 @@ button {
 .btn {
   cursor: pointer;
   outline: none;
-  font-weight: 400;
   border-radius: var(--radius-8);
   font-size: var(--g-14);
   line-height: var(--g-14);
@@ -314,6 +325,7 @@ button {
 .btn.sm,
 .btn.md {
   font-weight: inherit;
+  line-height: 1.029;
 }
 
 .btn.lg {
@@ -337,7 +349,7 @@ button {
   padding: var(--pd-md-lg);
 }
 
-.btn.br {
+.btn.ol {
   color: var(--white);
   background: transparent;
   border-color: initial;
@@ -384,7 +396,7 @@ button {
   background: var(--negative-05);
 }
 
-.btn.br.nt {
+.btn.ol.nt {
   color: var(--dark);
   border-color: var(--stroke);
 }
@@ -394,7 +406,7 @@ button {
   color: var(--grey);
 }
 
-.btn.br.pm {
+.btn.ol.pm {
   color: var(--primary-05);
   border-color: var(--primary-05);
 }

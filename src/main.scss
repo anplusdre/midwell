@@ -1,11 +1,18 @@
+@font-face {
+    font-family: 'Proxima Vara';
+    src: url("./fonts/Proxima\ Vara-VF.ttf");
+    font-weight: 100 900;
+}
 @import './color.css';
 @import './guide.css';
-@import './fonts/fonts.css';
+// @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
     --dark-bg: #040508;
     --dark-bg-02: #1a1b1e;
     --cards-bg: #222326;
+
+    --typeface: 'Proxima Vara';
 
     --border: 1px solid;
     --grad: linear-gradient(to right, var(--primary-05), #F12BAA, var(--caution-05));
@@ -24,15 +31,16 @@ body,
     text-align: unset;
 }
 
+* {
+    font-family: var(--typeface);
+}
+
 .dark {
     background: var(--dark-bg);
     color: var(--white);
-    font: var(--single-14-rg);
 }
 
 body {
-    font-size: 14px;
-    font-family: var(--typeface);
     min-height: 100%;
     height: 100%;
     color: var(--dark);
@@ -51,6 +59,14 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: var(--white);
     border: var(--border) var(--black);
+}
+
+p {
+    font-size: var(--g-16);
+}
+
+hr {
+    border-color: var(--dark);
 }
 
 ul {
@@ -228,10 +244,14 @@ a {
     .nav-head {
         line-height: var(--g-24);
         margin: 0 0 var(--g-12) 0;
-        font-weight: 600;
+        font-weight: 500;
         color: var(--white);
     }
 
+}
+
+.title {
+    margin-bottom: var(--g-8);
 }
 
 .colorPalette {
@@ -412,16 +432,19 @@ a {
 
 .ctWr {
     display: grid;
-    grid-row-gap: var(--g-24);
 
     .ctHd {
         display: grid;
         grid-row-gap: var(--g-16);
 
+        img {
+            margin-bottom: var(--g-48);
+        }
+
         .ctTl {
             font-weight: 500;
-            font-size: var(--g-48);
-            line-height: var(--g-56);
+            font-size: var(--g-56);
+            line-height: var(--g-64);
             background: var(--white);
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -429,10 +452,6 @@ a {
             strong {
                 font-size: 20px;
             }
-        }
-
-        p {
-            font-size: var(--g-16);
         }
 
         .ctSt {
@@ -445,9 +464,6 @@ a {
     .ctBd {
         display: flex;
         flex-direction: column;
-        gap: var(--g-64);
-        margin-bottom: var(--g-40);
-        padding-top: var(--g-40);
 
         p {
             color: var(--white);
@@ -461,6 +477,11 @@ a {
         &:first-child {
             border-top: 0;
         }
+
+        .buttonSizes {
+            margin-top: var(--g-16);
+        }
+
     }
 
     .ctTl {
@@ -481,10 +502,11 @@ a {
     width: 100%;
 
     .examples {
-        background: var(--dark-bg);
-
+        background: #090a0d;
+        border-bottom: 1px dashed;
+        border-color: var(--black);
         padding: var(--g-24);
-        border-bottom: 1px solid var(--black);
+        padding-bottom: var(--g-16);
     }
 
     .codeBlockWrapper {
@@ -495,6 +517,10 @@ a {
 
     code {
         padding: 0;
+
+        .token.attr-value{
+            color: var(--positive-03);
+        }
     }
 
     .codeBlockHeader {
@@ -529,7 +555,6 @@ a {
         border-left: none;
         border-right: none;
         border-radius: 0;
-        font-family: var(--typeface);
         font: var(--single-16-rg);
         font-weight: 500;
         color: var(--white);
@@ -607,7 +632,6 @@ a {
         h3,
         h4,
         h5 {
-            font-family: var(--typeface);
             display: flex;
             align-items: center;
             line-height: var(--g-72);

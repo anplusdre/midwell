@@ -10,9 +10,23 @@
         {
             "class": "sm",
             "height": "36",
-            "vertical": "y = 10",
-            "horizontal": "x = 12",
-            "html": "btn xs"
+            "vertical": "10",
+            "horizontal": "12",
+            "html": "btn sm"
+        },
+        {
+            "class": "md",
+            "height": "40",
+            "vertical": "12",
+            "horizontal": "16",
+            "html": "btn md"
+        },
+        {
+            "class": "lg",
+            "height": "48",
+            "vertical": "16",
+            "horizontal": "24",
+            "html": "btn lg"
         }
     ]
 }

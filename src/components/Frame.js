@@ -22,7 +22,7 @@ const Navigation = () => {
         <div className="container">
           <div className='identityBar'>
             <NavLink to="/" className='logo'><img src={Logo}/></NavLink>
-            <div>Powered by Deltadata Mandiri</div>
+            <div style={{ font: 'var(--single-14-rg)' }}>Powered by Deltadata Mandiri</div>
           </div>
         </div>
     </div>
