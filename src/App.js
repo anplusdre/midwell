@@ -1,8 +1,6 @@
 import './main.css';
 import Footer from './components/Footer';
 import Frame from './components/Frame';
-import midwell from './styles/midwell.module.css'
-import styles from './styles/mw.module.css'
 
 
 function App() {

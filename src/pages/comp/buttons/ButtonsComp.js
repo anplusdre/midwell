@@ -6,7 +6,6 @@ import CodeBlockComponent from '../codeblock/CodeBlock';
 import {Exemplar, ExemplarBlue} from '../exemplar/Exemplar';
 
 import styles from '../../../styles/mw.module.css'; // Import CSS module
-import midwell from '../../../styles/midwell.module.css'; // Import CSS module
 import '../codeblock/codeblock.css';
 
 const code1 = '<button>';
@@ -22,12 +21,12 @@ const ButtonsComp = () => {
               <p style={{fontSize : "var(--g-20)", fontWeight : "300"}}>
               At present, there are five button styles available: Solid, Outline, Fade, Ghost, and Disable. Each of these styles further encompasses five different variants: Neutral, Primary, Positive, Caution, and Negative.
               </p>
-              <img className={midwell['top-16']} src='../assets/CompButtons.png'></img>
+              <img className="top-16" src='../assets/CompButtons.png'></img>
           </div>
 
           <div className={styles.ctBd}>
             <h5 className={styles.title}>Get Started</h5>
-            <p className={midwell['btm-16']}>Midwell provides a base `.btn` class that establishes fundamental styles including padding and content alignment. By default, buttons with the <code>.btn</code> class have a transparent border and background color. They do not possess any specific focus or hover styles defined.
+            <p className="top-16">Midwell provides a base `.btn` class that establishes fundamental styles including padding and content alignment. By default, buttons with the <code>.btn</code> class have a transparent border and background color. They do not possess any specific focus or hover styles defined.
             </p>
             <Exemplar buttonContent={<button className="btn sm">Button</button>} />
             <CodeBlockComponent text={ButtonTables.ButtonStart} language="jsx" />
@@ -48,7 +47,7 @@ const ButtonsComp = () => {
             <CodeBlockComponent text={ButtonTables.ButtonSizes} language="jsx" />
             <div className='tableWrapper'>
               <p className='top-32'>Buttons with a height exceeding 48 pixels are not commonly used in user interfaces due to their unnecessary size or the requirement of excessively large text to maintain visibility. As a result, such buttons are generally non-existent. Below, you can find button size breakdown table. </p>
-              <h6 className="title top-32">Button Size table</h6>
+              <p className="top-32 btm-16" style={{fontSize : 'var(--g-20)', color : 'var(--disable-02)'}}>Button Size table</p>
               <ButtonSizeTable sizes={ButtonSizeTableData.sizes} />
             </div>
           </div>
@@ -71,6 +70,7 @@ const ButtonsComp = () => {
 
           <div className={styles.ctBd}>
             <h5 className={styles.title}>Variants</h5>
+            <Exemplar buttonContent={ButtonTables.ButtonColorVariants} />
             <CodeBlockComponent text={ButtonTables.ButtonColors} language="jsx" />
           </div>
 

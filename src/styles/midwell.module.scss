@@ -90,14 +90,9 @@ h6 {
     line-height: var(--g-32);
 }
 
-hr {
-    border-width: 1px;
-    border-style: solid;
-    margin: var(--g-64) 0;
-}
-
 button {
     all: unset;
+    font-weight: 500;
 }
 
 code {
@@ -106,10 +101,6 @@ code {
     border-radius: var(--radius-4);
     white-space: pre-wrap;
     font: var(--single-14-rg);
-}
-
-p {
-    line-height: 150%;
 }
 
 .pd-sm {
@@ -357,9 +348,7 @@ button {
     outline: none;
     border-radius: var(--radius-8);
     font-size: var(--g-14);
-    line-height: 1rem;
-    border: 1px solid;
-    background: transparent;
+    line-height: 1.5;
     border-color: transparent;
     box-sizing: border-box;
     -moz-box-sizing: border-box;

@@ -356,7 +356,6 @@ button {
     outline: none;
     border-radius: var(--radius-8);
     font-size: var(--g-14);
-    line-height: var(--g-14);
     border: 1px solid;
     background: transparent;
     border-color: transparent;
@@ -369,10 +368,6 @@ button {
 .btn.sm,
 .btn.md {
     font-weight: normal;
-}
-
-.btn.lg {
-    font-size: var(--g-16);
 }
 
 .btn.xs {
