@@ -1,17 +1,14 @@
 @font-face {
     font-family: 'Proxima Vara';
-    src: url("./fonts/Proxima\ Vara-VF.ttf");
+    src: url("../fonts/Proxima\ Vara-VF.ttf");
     font-weight: 100 900;
 }
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url("./fonts/JetBrainsMono-VariableFont_wght.ttf");
+    src: url("../fonts/JetBrainsMono-VariableFont_wght.ttf");
     font-weight: 100 800;
 }
-
-@import './color.css';
-@import './guide.css';
 // @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
@@ -40,7 +37,7 @@ body,
 }
 
 .dark {
-    background: var(--dark-bg);
+    background: var(--dark);
     color: var(--white);
 }
 
@@ -106,7 +103,8 @@ code {
     position: sticky;
     top: 0;
     padding: 20px 0;
-    background: var(--dark-bg);
+    background: rgba(18,19,22, 0.8);
+    backdrop-filter: saturate(180%) blur(8px);
     border-bottom: 1px solid;
     border-color: var(--black);
     // border-bottom: var(--border);
@@ -158,6 +156,7 @@ code {
     }
 
     .nav-dropdown {
+        margin-top: var(--g-8);
         max-height: 0;
         flex-direction: column;
         overflow: hidden;
@@ -176,12 +175,13 @@ code {
                     padding-left: var(--g-24);
                     border-left: var(--border) var(--black);
                 }
+                
+                .active {
+                    border-left: var(--border) var(--primary-05);
+                    font-weight: 500;
+                }
             }
 
-            a.active {
-                border-left: var(--border) var(--primary-05);
-                font-weight: 500;
-            }
         }
     }
 
@@ -195,12 +195,12 @@ code {
         li {
             position: relative;
             overflow: hidden;
-            margin: var(--g-4) 0;
+            margin-bottom: var(--g-4);
 
             a {
                 font: var(--single-14-rg);
                 color: var(--disable-02);
-                padding: var(--g-6) var(--g-16);
+                padding: var(--g-8) var(--g-16);
                 padding-left: 0;
                 transition: $ease-color;
 
@@ -225,7 +225,7 @@ code {
                     content: "";
                     width: 16px;
                     height: 16px;
-                    background-image: url(./assets/right.svg);
+                    background-image: url(../assets/right.svg);
                     background-repeat: no-repeat;
                     background-position: center;
                 }
@@ -236,13 +236,13 @@ code {
                     content: "";
                     width: 16px;
                     height: 16px;
-                    background-image: url(./assets/down.svg);
+                    background-image: url(../assets/down.svg);
                     background-repeat: no-repeat;
                     background-position: center;
                 }
             }
 
-            a.active {
+            .active {
                 color: var(--primary-05);
                 font-weight: 500;
 
@@ -425,7 +425,7 @@ code {
 
                         &::after {
                             content: "";
-                            background-image: url(./assets/copy_small.svg);
+                            background-image: url(../assets/copy_small.svg);
                             background-repeat: no-repeat;
                             background-position: center;
                             width: 100%;
@@ -502,7 +502,7 @@ code {
 }
 
 .copyIcon {
-    background: url(./assets/copy.svg) center no-repeat;
+    background: url(../assets/copy.svg) center no-repeat;
     height: var(--g-16);
     width: var(--g-16);
 }
@@ -547,7 +547,7 @@ code {
 }
 
 .co-warning {
-    background: var(--caution-dark, var(--caution-05));
+    background: rgb(var(--caution-05) / 8%);
     border-left-color: var(--caution-03);
     color: var(--caution-03);
 
@@ -563,8 +563,8 @@ code {
     padding: var(--g-24);
 
     button {
-        background: var(--white);
-        color: var(--black);
+        background: var(--black);
+        color: var(--white);
     }
 }
 
@@ -572,9 +572,9 @@ code {
     width: 100%;
 
     .codeBlockWrapper {
-        background: var(--cards-bg);
+        background: var(--dark-bg);
         border: var(--border) var(--black);
-        border-radius: var(--g-6);
+        border-radius: var(--g-8);
     }
 
     code {

@@ -3,13 +3,13 @@ const ColorTable = ({ title, banner, description, colors }) => {
   return (
     <div>
       <div className='ctTl'>
-        <h6>{title}</h6>
-        <p className='top-8 btm-16'>
+        <h5 className="title">{title}</h5>
+        <p className='btm-16'>
           {description}
         </p>
         {/* <img src={banner} alt='Banner'></img> */}
       </div>
-      <table className='tables hollow darkTheme top-16'>
+      <table className='tables hollow darkTheme top-16 btm-48'>
         <thead>
           <tr className='tableHead'>
             <th>Name</th>

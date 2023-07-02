@@ -7,10 +7,10 @@ const ButtonSizes = `<button className="btn xs">X Small</button>
 <button className="btn lg">Large</button>
 `;
 
-const ButtonStyles = `<button className="btn sl">Solid</button>
-<button className="btn ol">Outline</button>
-<button className="btn fd">Fade</button>
-<button className="btn gh">Ghost</button>
+const ButtonStyles = `<button className="btn sm sl">Solid</button>
+<button className="btn sm ol">Outline</button>
+<button className="btn sm fd">Fade</button>
+<button className="btn sm gh">Ghost</button>
 `;
 
 const ButtonColors = `<button className="btn sm sl nt">Neutral</button>

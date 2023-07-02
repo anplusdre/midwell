@@ -1,60 +1,68 @@
 import React from 'react';
 import ButtonTables from './ButtonTables';
-// import ButtonsTable from './ButtonsTable.json'
+import ButtonSizeTableData from './ButtonSizeTableData.json';
+import ButtonSizeTable from './ButtonSizeTable';
+import { CodeBlock } from 'react-code-blocks';
 import jsSvg from '../../../assets/js.svg';
-import ButtonSizeTableData from './ButtonSizeTableData.json'
-import ButtonSizeTable from './ButtonSizeTable'
-import { CodeBlock, CopyBlock, dracula, xt256 } from 'react-code-blocks';
+import codeblockcol from '../../color/codeblockcol';
+
+import styles from '../../../styles/mw.module.css'; // Import CSS module
+import midwell from '../../../styles/midwell.module.css'; // Import CSS module
 
 const code1 = '<button>';
 const code2 = '<div>';
 
+const exemplar = styles.examples + ' ' + midwell.rw + ' ' + midwell['rw-16'] + ' ' + midwell['fx-start'] + ' ' + midwell['top-16'] + ' ' + midwell['btm-16'];
+
 const ButtonsComp = () => {
   return (
     <div>
-      <div className='CompButtons'>
-        <div className='ctWr'>
-          <div className='ctHd'>
-            <div className='ctTl'>Buttons</div>
+      <div className={styles.CompButtons}>
+        <div className={styles.ctWr}>
+          <div className={styles.ctHd}>
+            <div className={styles.ctTl}>Buttons</div>
               <p style={{fontSize : "var(--g-20)", fontWeight : "300"}}>
               At present, there are five button styles available: Solid, Outline, Fade, Ghost, and Disable. Each of these styles further encompasses five different variants: Neutral, Primary, Positive, Caution, and Negative.
               </p>
-              <img className='top-16' src='../assets/CompButtons.png'></img>
+              <img className={midwell['top-16']} src='../assets/CompButtons.png'></img>
           </div>
-          <div className='ctBd'>
-            <h5 className="title">Get Started</h5>
-            <p className='btm-16'>Midwell provides a base `.btn` class that establishes fundamental styles including padding and content alignment. By default, buttons with the <code>.btn</code> class have a transparent border and background color. They do not possess any specific focus or hover styles defined.
+          <div className={styles.ctBd}>
+            <h5 className={styles.title}>Get Started</h5>
+            <p className={midwell['btm-16']}>Midwell provides a base `.btn` class that establishes fundamental styles including padding and content alignment. By default, buttons with the <code>.btn</code> class have a transparent border and background color. They do not possess any specific focus or hover styles defined.
             </p>
-            <div className='codeBlock'><pre><CopyBlock text={ButtonTables.ButtonStart} language="jsx" showLineNumbers={false} theme={xt256} coedeblock/></pre></div>
-            <div className='examples rw rw-16 fx-start top-16 btm-16'>
+            <div className={styles.codeBlock}>
+              <pre className={styles.codeBlockWrapper}><CodeBlock text={ButtonTables.ButtonStart} language="jsx" showLineNumbers={false} theme={codeblockcol} coedeblock/>
+              </pre>
+            </div>
+            <div className={exemplar}>
                     <button className="btn sm">Button</button>
             </div>
-            <div className='callout co-warning'>
+            <div className="callout co-warning">
             You can utilize the <code>.btn</code> class with either the <code>{code1}</code> tag or a <code>{code2}</code> tag. It is important to note that the class must begin with <code>.btn</code>. Additionally, please keep in mind that the button element does not have a predefined width. If you wish to create a row or column of buttons, you will need to manually assign a flex or grid parent and set the appropriate properties.
             </div>
             <hr></hr>
             <div className='ctCt'>
-            <h5 className="title">Sizes</h5>
+            <h5 className={styles.title}>Sizes</h5>
             <p>There are four button sizes available: <code>xs</code>, <code>sm</code>, <code>md</code>, and <code>lg</code>.
             Each size utilizes padding and is based on its text line-height. Here is a breakdown of the button sizes along with some examples:
             </p>
                         
-            <div className='examples rw rw-16 fx-start top-16 btm-16'>
+            <div className={exemplar}>
                     <button className="btn xs">Extra Small</button>
                     <button className="btn sm">Small</button>
                     <button className="btn md">Medium</button>
                     <button className="btn lg">Large</button>
             </div>
-            <div className='buttonSizes'>
-              <div className='codeBlock'>
-                <pre className='codeBlockWrapper'>
-                  <div className='codeBlockHeader'>
-                    <div className='cBTitle'><img src={jsSvg}></img>
+            <div className={styles.buttonSizes}>
+              <div className={styles.codeBlock}>
+                <pre className={styles.codeBlockWrapper}>
+                  <div className={styles.codeBlockHeader}>
+                    <div className={styles.cBTitle}><img src={jsSvg}></img>
                       jsx
                     </div>
                   </div>
                   
-                  <CodeBlock text={ButtonTables.ButtonSizes} language="jsx" showLineNumbers={false} theme={dracula} />
+                  <CodeBlock text={ButtonTables.ButtonSizes} language="jsx" showLineNumbers={false} theme={codeblockcol} />
                 </pre>
               </div>
             </div>
@@ -67,28 +75,28 @@ const ButtonsComp = () => {
 
           <hr />
 
-          <div className='ctBd'>
+          <div className={styles.ctBd}>
             <div className='ctCt'>
-            <h5 className="title">Styles</h5>
+            <h5 className={styles.title}>Styles</h5>
             <p>There are 4 sizes of the buttons <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>,
                   all of these sizes use padding and rely upon it's text line-height. Below are the button sizes breakdown and examples :
             </p>
             
-            <div className='examples rw rw-16 fx-start top-16 btm-16'>
+            <div className={exemplar}>
                     <button className="btn sm sl">Solid</button>
                     <button className="btn sm fd">Fade</button>
                     <button className="btn sm ol">Outline</button>
                     <button className="btn sm gh">Ghost</button>
             </div>
-            <div className='buttonSizes'>
-              <div className='codeBlock'>
-                <pre className='codeBlockWrapper'>
-                  <div className='codeBlockHeader'>
-                    <div className='cBTitle'><img src={jsSvg}></img>
+            <div className={styles.buttonSizes}>
+              <div className={styles.codeBlock}>
+                <pre className={styles.codeBlockWrapper}>
+                  <div className={styles.codeBlockHeader}>
+                    <div className={styles.cBTitle}><img src={jsSvg}></img>
                       jsx
                     </div>
                   </div>
-                  <CodeBlock text={ButtonTables.ButtonStyles} language="jsx" showLineNumbers={false} theme={dracula} />
+                  <CodeBlock text={ButtonTables.ButtonStyles} language="jsx" showLineNumbers={false} theme={codeblockcol} />
                 </pre>
               </div>
             </div>
@@ -97,17 +105,17 @@ const ButtonsComp = () => {
 
           <hr />
 
-          <div className='ctBd'>
-            <h5 className="title">Variants</h5>
-            <div className='buttonSizes'>
-              <div className='codeBlock'>
-                <pre className='codeBlockWrapper'>
-                  <div className='codeBlockHeader'>
-                    <div className='cBTitle'><img src={jsSvg}></img>
+          <div className={styles.ctBd}>
+            <h5 className={styles.title}>Variants</h5>
+            <div className={styles.buttonSizes}>
+              <div className={styles.codeBlock}>
+                <pre className={styles.codeBlockWrapper}>
+                  <div className={styles.codeBlockHeader}>
+                    <div className={styles.cBTitle}><img src={jsSvg}></img>
                       jsx
                     </div>
                   </div>
-                  <div className='examples rw rw-16 fx-start'>
+                  <div className={exemplar}>
                     <button className="btn sm sl nt">Neutral</button>
                     <button className="btn sm sl primary">Primary</button>
                     <button className="btn sm sl pt">Positive</button>
@@ -115,23 +123,23 @@ const ButtonsComp = () => {
                     <button className="btn sm sl ng">Negative</button>
                     <button className="btn sm disable">Disable</button>
                   </div>
-                  <CodeBlock text={ButtonTables.ButtonColors} language="jsx" showLineNumbers={false} theme={dracula} />
+                  <CodeBlock text={ButtonTables.ButtonColors} language="jsx" showLineNumbers={false} theme={codeblockcol} />
                 </pre>
               </div>
             </div>
           </div>
 
-          <div className='ctBd'>
-            <h5 className="title">Icons</h5>
-            <div className='buttonSizes'>
-              <div className='codeBlock'>
-                <pre className='codeBlockWrapper'>
-                  <div className='codeBlockHeader'>
-                    <div className='cBTitle'><img src={jsSvg}></img>
+          <div className={styles.ctBd}>
+            <h5 className={styles.title}>Icons</h5>
+            <div className={styles.buttonSizes}>
+              <div className={styles.codeBlock}>
+                <pre className={styles.codeBlockWrapper}>
+                  <div className={styles.codeBlockHeader}>
+                    <div className={styles.cBTitle}><img src={jsSvg}></img>
                       jsx
                     </div>
                   </div>
-                  <div className='examples rw rw-16 fx-start'>
+                  <div className={exemplar}>
                     <button className="btn sm sl nt i-lf">
                       <img src='../assets/copy.svg' />Left Icon
                     </button>
@@ -139,7 +147,7 @@ const ButtonsComp = () => {
                       <img src='../assets/copy.svg' />Right Icon
                     </button>
                   </div>
-                  <CodeBlock text={ButtonTables.ButtonIcons} language="jsx" showLineNumbers={false} theme={dracula} />
+                  <CodeBlock text={ButtonTables.ButtonIcons} language="jsx" showLineNumbers={false} theme={codeblockcol} />
                 </pre>
               </div>
             </div>
@@ -159,7 +167,7 @@ const ButtonsComp = () => {
             </div>
           </div>
 
-          {/* <div className='ctBd'>
+          {/* <div className={styles.ctBd}>
             <div className="ButtonsExample">
               <ButtonCheatSheet
                 title={ButtonsTable.basePalette.title}

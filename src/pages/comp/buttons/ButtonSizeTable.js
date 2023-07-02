@@ -1,10 +1,12 @@
 import React from 'react';
+import styles from '../../../styles/mw.module.css'; // Import CSS module
+import midwell from '../../../styles/midwell.module.css'; // Import CSS module
 const ButtonSizeTable = ({sizes}) => {
   return (
     <div>
-      <table className='tables hollow darkTheme'>
+      <table className={midwell.tables + ' ' + styles.hollow + ' ' + midwell.darkTheme}>
         <thead>
-          <tr className='tableHead'>
+          <tr className={midwell.tableHead}>
             <th>Class</th>
             <th>Height (px)</th>
             <th>Vertical Padding (px)</th>
@@ -12,9 +14,9 @@ const ButtonSizeTable = ({sizes}) => {
             <th>Html</th>
           </tr>
         </thead>
-        <tbody className='tableBody'>
+        <tbody className={midwell.tableBody}>
           {sizes.map((size, index) => (
-            <tr className='tableData' key={index}>
+            <tr className={midwell.tableData} key={index}>
             <td>{size.class}</td>
             <td>{size.height}</td>
             <td>{size.vertical}</td>

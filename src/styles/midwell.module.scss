@@ -2,6 +2,7 @@
     --g-4: 4px;
     --g-6: 6px;
     --g-8: 8px;
+    --g-10: 10px;
     --g-12: 12px;
     --g-14: 14px;
     --g-16: 16px;
@@ -356,7 +357,7 @@ button {
     outline: none;
     border-radius: var(--radius-8);
     font-size: var(--g-14);
-    line-height: var(--g-14);
+    line-height: 1rem;
     border: 1px solid;
     background: transparent;
     border-color: transparent;
@@ -368,7 +369,7 @@ button {
 .btn.xs,
 .btn.sm,
 .btn.md {
-    font-weight: normal;
+    font-weight: inherit;
 }
 
 .btn.lg {
@@ -394,11 +395,11 @@ button {
 .btn.ol {
     color: var(--white);
     background: transparent;
-    border-color: initial;
+    border-color: inherit;
 }
 
 .btn.fd {
-    color: var(--dark);
+    color: inherit;
     background: var(--fade);
 }
 
