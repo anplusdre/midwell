@@ -61,10 +61,10 @@ const Navigation = () => {
       <div className={styles.list}>
         <div className={styles['nav-head']}>Components</div>
         <ul>
-          <li><NavLink to="/components/buttons">Buttons</NavLink></li>
-          <li><NavLink to="/labels">Labels</NavLink></li>
-          <li><NavLink to="/checkboxes">Checkboxes</NavLink></li>
-          <li><NavLink to="/accordion">Accordion</NavLink></li>
+          <li><NavLink className={dropActive} to="/components/buttons">Buttons</NavLink></li>
+          <li><NavLink className={dropActive} to="/labels">Labels</NavLink></li>
+          <li><NavLink className={dropActive} to="/checkboxes">Checkboxes</NavLink></li>
+          <li><NavLink className={dropActive} to="/accordion">Accordion</NavLink></li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,106 @@
+.examples {
+    border: 1px dashed;
+    border-color: var(--grey-02);
+    border-radius: var(--radius-8);
+    padding: var(--g-24);
+
+    button {
+        background: var(--white);
+        color: var(--black);
+    }
+}
+
+.codeBlock,
+.copyBlock {
+    width: 100%;
+
+    .codeBlockWrapper {
+        background: var(--dark-bg);
+        border: var(--border) var(--black);
+        border-radius: var(--g-6);
+    }
+
+    code {
+        padding: 0;
+        font-size: var(--g-14) !important;
+
+        .token.attr-value {
+            color: #18ec5f;
+        }
+    }
+
+    .codeBlockHeader {
+        border-top-left-radius: var(--g-8);
+        border-top-right-radius: var(--g-8);
+        background: #1e1f23;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--pd-smd-md);
+        color: var(--disable-02);
+        border-bottom: var(--border) var(--black);
+
+        .cBTitle {
+            display: flex;
+            flex-direction: row;
+            gap: var(--g-8);
+            align-items: center;
+        }
+
+        svg:hover>.copypath {
+            stroke: var(--primary-03);
+        }
+
+        .copypath {
+            transition: stroke .02s ease-in-out;
+        }
+
+        .codeAction {
+            display: flex;
+            gap: var(--g-12);
+            align-items: center;
+
+        }
+
+    }
+
+    .hollow {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        font: var(--single-16-rg);
+        font-weight: 500;
+        color: var(--white);
+    }
+
+    span {
+        background: none !important;
+    }
+
+    .token.hexcode,
+    .token.punctuation,
+    .token.psuedo-class {
+        color: var(--white);
+    }
+
+    .token {
+        line-height: var(--g-24);
+    }
+
+    .property {
+        color: var(--primary-03);
+    }
+
+    .pseudo-class {
+        margin-bottom: var(--g-12);
+    }
+
+    code {
+        background: transparent;
+        padding: var(--pd-lg-lg) !important;
+    }
+
+    .react-syntax-highlighter-line-number {
+        color: var(--grey-02);
+    }
+}

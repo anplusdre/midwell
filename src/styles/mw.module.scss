@@ -9,6 +9,7 @@
     src: url("../fonts/JetBrainsMono-VariableFont_wght.ttf");
     font-weight: 100 800;
 }
+
 // @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
@@ -103,7 +104,7 @@ code {
     position: sticky;
     top: 0;
     padding: 20px 0;
-    background: rgba(18,19,22, 0.8);
+    background: rgba(18, 19, 22, 0.8);
     backdrop-filter: saturate(180%) blur(8px);
     border-bottom: 1px solid;
     border-color: var(--black);
@@ -175,7 +176,7 @@ code {
                     padding-left: var(--g-24);
                     border-left: var(--border) var(--black);
                 }
-                
+
                 .active {
                     border-left: var(--border) var(--primary-05);
                     font-weight: 500;
@@ -561,14 +562,19 @@ code {
     border-color: var(--grey-02);
     border-radius: var(--radius-8);
     padding: var(--g-24);
+}
+
+
+.ButtonDarkThemme {
 
     button {
-        background: var(--black);
+        background: var(--primary-05);
         color: var(--white);
     }
 }
 
-.codeBlock, .copyBlock {
+.codeBlock,
+.copyBlock {
     width: 100%;
 
     .codeBlockWrapper {
