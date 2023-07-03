@@ -1,26 +1,83 @@
-import React from 'react';
-import { Link } from 'react-scroll';
-import parse from 'html-react-parser';
+import React, { useEffect, useState } from 'react';
+import styles from '../../../styles/mw.module.css';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-const TableOfContents = ({ content }) => {
-  // Parse the content and extract the headings
-  const headings = parse(content).reduce((acc, node) => {
-    if (node.type === 'h1' || node.type === 'h2' || node.type === 'h3') {
-      acc.push({ id: node.props.id, text: node.props.children });
+const TableOfContents = ({ sections }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPositions = sections.map((section) => {
+        const element = document.getElementById(section.id);
+        return {
+          id: section.id,
+          position: element ? element.offsetTop - 85 : 0, // Adjusted scroll position with 85px margin
+        };
+      });
+
+      const currentScrollPosition = window.scrollY;
+
+      const activeSection = scrollPositions.reduce(
+        (acc, curr) => (curr.position <= currentScrollPosition ? curr : acc),
+        scrollPositions[0]
+      );
+
+      setActiveSection(activeSection.id);
+
+      const activeSectionPath = sections.find((section) => section.id === activeSection.id)?.path;
+      if (activeSectionPath && location.pathname !== activeSectionPath) {
+        navigate(activeSectionPath, { replace: true });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [sections, location.pathname, navigate]);
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.slice(1);
+      const decodedSectionId = decodeURIComponent(sectionId);
+      setActiveSection(decodedSectionId);
     }
-    return acc;
-  }, []);
+  }, [location]);
+
+  const dropActive = (sectionId) =>
+    sectionId === activeSection ? styles.active : styles.nav_link;
+
+  const handleClick = (event, sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      event.preventDefault();
+      const sectionTopOffset = sectionElement.offsetTop - 85; // Adjusted scroll position with 85px margin
+      window.scrollTo({ top: sectionTopOffset, behavior: 'smooth' });
+      navigate(sectionId);
+    }
+  };
 
   return (
-    <ul>
-      {headings.map((heading) => (
-        <li key={heading.id}>
-          <Link to={heading.id} smooth={true} offset={-70} duration={500}>
-            {heading.text}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <nav>
+      <ul>
+        {sections.map((section) => (
+          <li key={section.id}>
+            <NavLink
+              to={section.path}
+              smooth="true"
+              duration={500}
+              className={dropActive(section.id)}
+              onClick={(event) => handleClick(event, section.id)}
+            >
+              {section.label}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 

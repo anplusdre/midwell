@@ -4,7 +4,7 @@ import midwell from '../../../styles/midwell.module.css'; // Import CSS module
 
 const Exemplar = ({ buttonContent }) => {
   return (
-    <div className={styles.examples + ' ' + midwell.rw + ' ' + midwell['rw-16'] + ' ' + midwell['fx-start'] + ' ' + midwell['top-16'] + ' ' + midwell['btm-16']}>
+    <div className={styles.examples + ' ' + midwell.rw + ' ' + midwell['rw-16'] + ' ' + midwell['fx-start']}>
       {buttonContent}
     </div>
   );

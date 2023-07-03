@@ -1,0 +1,111 @@
+.btn {
+    cursor: pointer;
+    outline: none;
+    border-radius: var(--radius-8);
+    font-size: var(--g-14);
+    border: 1px solid;
+    background: transparent;
+    border-color: transparent;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.btn.xs {
+    padding: var(--pd-sm-smd);
+}
+
+.btn.sm {
+    padding: 10px var(--g-12);
+}
+
+.btn.md {
+    padding: var(--pd-smd-md);
+}
+
+.btn.lg {
+    padding: var(--g-16) var(--g-16);
+}
+
+.btn.ol {
+    color: var(--white);
+    background: transparent;
+    border-color: initial;
+}
+
+.btn.fd {
+    color: var(--dark);
+    background: var(--fade);
+}
+
+.btn.gh {
+    background: transparent;
+    border-color: transparent;
+    color: inherit;
+}
+
+.btn.nt {
+    color: var(--white);
+    background: var(--black);
+}
+
+.btn.primary {
+    color: var(--white);
+    background: var(--primary-05);
+}
+
+.btn.positive {
+    color: var(--white);
+    background: var(--positive-05);
+}
+
+.btn.secondary {
+    color: var(--white);
+    background: var(--secondary);
+}
+
+.btn.warning {
+    color: var(--white);
+    background: var(--caution-05);
+}
+
+.btn.negative {
+    color: var(--white);
+    background: var(--negative-05);
+}
+
+.btn.ol.nt {
+    color: var(--dark);
+    border-color: var(--stroke);
+}
+
+.btn.disable {
+    background: var(--disable);
+    color: var(--grey);
+}
+
+.btn.ol.primary {
+    color: var(--primary-05);
+    border-color: var(--primary-05);
+}
+
+.btn.fd.primary {
+    color: var(--primary-05);
+    background: var(--primary-01);
+}
+
+.btn.i-lf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--g-8);
+}
+
+.btn.i-rg {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--g-8);
+}

@@ -4,6 +4,7 @@ import ButtonSizeTableData from './ButtonSizeTableData.json';
 import ButtonSizeTable from './ButtonSizeTable';
 import CodeBlockComponent from '../codeblock/CodeBlock';
 import {Exemplar, ExemplarBlue} from '../exemplar/Exemplar';
+import './button.css'
 
 import styles from '../../../styles/mw.module.css'; // Import CSS module
 import '../codeblock/codeblock.css';
@@ -12,6 +13,12 @@ const code1 = '<button>';
 const code2 = '<div>';
 
 const ButtonsComp = () => {
+  
+  const sections = [
+    { id: 'Base', label: 'Base', path: '/components/buttons#Base' },
+    { id: 'Sizes', label: 'Sizes', path: '/components/buttons#Sizes' },
+    { id: 'Variants', label: 'Variants', path: '/components/buttons#Variants' },
+  ];
   return (
     <div>
       <div className={styles.CompButtons}>
@@ -24,10 +31,11 @@ const ButtonsComp = () => {
               <img className="top-16" src='../assets/CompButtons.png'></img>
           </div>
 
-          <div className={styles.ctBd}>
+          <div className={styles.ctBd} id="Base">
             <h5 className={styles.title}>Get Started</h5>
-            <p className="top-16">Midwell provides a base `.btn` class that establishes fundamental styles including padding and content alignment. By default, buttons with the <code>.btn</code> class have a transparent border and background color. They do not possess any specific focus or hover styles defined.
+            <p>Midwell provides a base `.btn` class that establishes fundamental styles including padding and content alignment. By default, buttons with the <code>.btn</code> class have a transparent border and background color. They do not possess any specific focus or hover styles defined.
             </p>
+
             <Exemplar buttonContent={<button className="btn sm">Button</button>} />
             <CodeBlockComponent text={ButtonTables.ButtonStart} language="jsx" />
             <div className="callout co-warning">
@@ -37,7 +45,7 @@ const ButtonsComp = () => {
 
           <hr />
 
-          <div className={styles.ctBd}>
+          <div className={styles.ctBd} id='Sizes'>
             <h5 className={styles.title}>Sizes</h5>
             <p>There are four button sizes available: <code>xs</code>, <code>sm</code>, <code>md</code>, and <code>lg</code>.
             Each size utilizes padding and is based on its text line-height. Here is a breakdown of the button sizes along with some examples:
@@ -55,6 +63,17 @@ const ButtonsComp = () => {
 
           <hr />
 
+          <div className={styles.ctBd} id='Variants'>
+            <h5 className={styles.title}>Variants</h5>
+            <p>
+           These variants allow you to customize the visual presentation of the buttons based on the desired context or purpose. Using button variants appropriately is important for maintaining visual consistency and conveying meaning to users. By selecting the appropriate button variant, you can enhance the user experience and provide visual cues that help users understand the purpose and importance of different actions within your application or website.
+            </p>
+            <Exemplar buttonContent={ButtonTables.ButtonColorVariants} />
+            <CodeBlockComponent text={ButtonTables.ButtonColors} language="jsx" />
+          </div>
+
+          <hr />
+
           <div className={styles.ctBd}>
             <h5 className={styles.title}>Styles</h5>
             <p>There are 4 sizes of the buttons <code>xs</code>, <code>sm</code>, <code>md</code>, <code>lg</code>,
@@ -64,14 +83,6 @@ const ButtonsComp = () => {
                 <><button className="btn sm sl">Solid</button><button className="btn sm fd">Fade</button><button className="btn sm ol">Outline</button><button className="btn sm gh">Ghost</button></>
             } />
             <CodeBlockComponent text={ButtonTables.ButtonStyles} language="jsx" />
-          </div>
-
-          <hr />
-
-          <div className={styles.ctBd}>
-            <h5 className={styles.title}>Variants</h5>
-            <Exemplar buttonContent={ButtonTables.ButtonColorVariants} />
-            <CodeBlockComponent text={ButtonTables.ButtonColors} language="jsx" />
           </div>
 
           <hr />

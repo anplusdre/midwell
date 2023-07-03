@@ -26,7 +26,7 @@
 }
 .codeBlock code .token.attr-value,
 .copyBlock code .token.attr-value {
-  color: #18ec5f;
+  color: var(--caution-04);
 }
 .codeBlock .codeBlockHeader,
 .copyBlock .codeBlockHeader {
