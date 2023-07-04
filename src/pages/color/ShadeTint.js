@@ -5,7 +5,7 @@ import styles from '../../styles/mw.module.css';
 import CopyToClipboard from '../../components/CopyClipboard';
 import ContentTable from '../../components/ContentTable';
 
-const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers, contrastColor }, {cssModules}) => {
+const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers, contrastColor }) => {
 
   return (
     <div className={styles.cards + ' ' + styles.colors}>
@@ -34,18 +34,10 @@ const ColorCard = ({ background, color, contrast, hex, colorName, colorNumbers, 
 
 const ShadeTint = () => {
   const { base, grey, primary, secondary, positive, caution, negative, } = colors;
-  const sections = [
-    { id: 'Base Colors', label: 'Base Colors', path: '/color/shadetint#Base' },
-    { id: 'Grey Colors', label: 'Grey Colors', path: '/color/shadetint#Grey' },
-    { id: 'Primary Colors', label: 'Primary Colors', path: '/color/shadetint#Primary' },
-    { id: 'Secondary Colors', label: 'Secondary Colors', path: '/color/shadetint#Secondary' },
-    { id: 'Positive Colors', label: 'Positive Colors', path: '/color/shadetint#Positive' },
-    { id: 'Caution Colors', label: 'Caution Colors', path: '/color/shadetint#Caution' },
-    { id: 'Negative Colors', label: 'Negative Colors', path: '/color/shadetint#Negative' },
-  ];
+  
   return (
     <>
-      <div className={styles.colorPalette} id='Base'>
+      <div className={styles.colorPalette}>
         <div className={styles.cardTitle}><div className={styles.baseIcon}></div>Base Colors</div>
         <div className={styles.cardSubTitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         <div className={styles.cardsGrid}>
@@ -54,7 +46,7 @@ const ShadeTint = () => {
           ))}
         </div>
 
-        <div className={styles.cardTitle} id='Grey'><div className={styles.grIcon}></div>Grey Color</div>
+        <div className={styles.cardTitle}><div className={styles.grIcon}></div>Grey Color</div>
         <div className={styles.cardSubTitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         <div className={styles.cardsGrid}>
           {grey.map((color, index) => (
@@ -62,7 +54,7 @@ const ShadeTint = () => {
           ))}
         </div>
 
-        <div className={styles.cardTitle} id='Primary'><div className={styles.prmIcon}></div>Primary Color</div>
+        <div className={styles.cardTitle} id><div className={styles.prmIcon}></div>Primary Color</div>
         <div className={styles.cardSubTitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         <div className={styles.cardsGrid}>
           {primary.map((color, index) => (
@@ -102,7 +94,7 @@ const ShadeTint = () => {
           ))}
         </div>
       </div>
-      <ContentTable sections={sections} />
+      <ContentTable />
     </>
   );
 };

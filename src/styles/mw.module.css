@@ -146,6 +146,88 @@ hr {
   color: var(--white);
 }
 
+.tables {
+  width: 100%;
+  table-layout: fixed;
+  border-radius: var(--g-8);
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.tables code {
+  font-weight: unset;
+}
+.tables .tableHead {
+  max-height: var(--g-40);
+  border-bottom: 1px solid;
+}
+.tables .tableHead th {
+  padding: var(--g-12) var(--g-12);
+  text-align: left;
+}
+.tables .tableBody .tableData td {
+  padding: var(--g-12) var(--g-12);
+  border-bottom: 1px solid;
+  text-align: left;
+}
+.tables .tableBody .tableData .labels {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tables.OutlineStyle {
+  border: 1px solid;
+}
+.tables.OutlineStyle .tableHead {
+  border-bottom-color: var(--black);
+}
+.tables.OutlineStyle .tableHead th {
+  border-right: none;
+}
+
+.tables.darkTheme {
+  border-color: var(--black);
+}
+.tables.darkTheme .tableHead {
+  border-color: var(--black);
+}
+.tables.darkTheme .tableHead th {
+  border-color: 0;
+}
+.tables.darkTheme .tableBody td {
+  border-bottom-color: var(--black);
+}
+
+.tables.LightTheme {
+  border-color: var(--stroke);
+}
+
+.tables.hollow {
+  border: none;
+}
+.tables.hollow .tableHead th {
+  font-weight: bold;
+  color: var(--stroke);
+}
+.tables.hollow .tableHead th:last-child {
+  border-right: none;
+}
+
+.labels {
+  display: flex;
+  flex-direction: row;
+  gap: var(--g-8);
+}
+.labels .label {
+  border-radius: var(--g-6);
+  font-size: var(--g-14);
+}
+
+.labels.darkTheme .label {
+  padding: var(--g-4) var(--g-6);
+  color: var(--white);
+  border: var(--border) var(--black);
+}
+
 .TableofContent {
   position: sticky;
   top: 85px;

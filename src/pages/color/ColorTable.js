@@ -1,35 +1,37 @@
 import React from 'react';
+import styles from '../../styles/mw.module.css'
+import midwell from '../../styles/midwell.module.css'
 const ColorTable = ({ title, banner, description, colors }) => {
   return (
     <div>
-      <div className='ctTl'>
-        <h5 className="title">{title}</h5>
-        <p className='btm-16'>
+      <div className={styles.ctTl}>
+        <h5 className={styles.title}>{title}</h5>
+        <p className={styles['btm-16']}>
           {description}
         </p>
         {/* <img src={banner} alt='Banner'></img> */}
       </div>
-      <table className='tables hollow darkTheme top-16 btm-48'>
+      <table className={styles.tables + ' ' + styles.hollow + ' ' + styles.darkTheme + ' ' + midwell['top-16'] + ' ' + midwell['btm-16']}>
         <thead>
-          <tr className='tableHead'>
+          <tr className={styles.tableHead}>
             <th>Name</th>
             <th>Hex</th>
             <th>Usage</th>
             <th>Variable</th>
           </tr>
         </thead>
-        <tbody className='tableBody'>
+        <tbody className={styles.tableBody}>
           {colors.map((color, index) => (
-            <tr className='tableData' key={index}>
+            <tr className={styles.tableData} key={index}>
             <td>{color.name}</td>
               <td>
-                <div className='colorBox'>
-                  <div className='box' style={{ background: color.colorCode }}></div>
+                <div className={styles.colorBox}>
+                  <div className={styles.box} style={{ background: color.colorCode }}></div>
                   {color.hex}
                 </div>
               </td>
               <td style={{ width: '160px' }}>
-                <div className='labels darkTheme'>
+                <div className={styles.labels + ' ' + styles.darkTheme}>
                   {color.labels.map((label, index) => (
                     <div className='label' key={index}>{label}</div>
                   ))}
