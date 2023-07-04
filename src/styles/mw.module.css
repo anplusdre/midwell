@@ -33,16 +33,18 @@
   height: 20px;
 }
 
-.Grid {
-  display: grid;
-  grid-template-columns: 1.5fr 5fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 24px;
-  grid-row-gap: 0px;
-}
-
 .Content {
   width: 100%;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-column-gap: var(--g-24);
+  margin-top: var(--g-24);
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-column-gap: var(--g-24);
 }
 
 .container {
@@ -216,7 +218,7 @@ hr {
 }
 .colorPalette .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: var(--g-16);
   grid-row-gap: var(--g-24);
   margin-bottom: var(--g-48);
@@ -227,6 +229,18 @@ hr {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+.colorPalette .cardsGrid .cards .colorBox {
+  display: flex;
+  flex-direction: row;
+  gap: var(--g-8);
+  align-items: center;
+}
+.colorPalette .cardsGrid .cards .colorBox .box {
+  border-radius: var(--g-4);
+  width: var(--g-16);
+  height: var(--g-16);
+  border: 1px solid var(--black);
 }
 .colorPalette .cardsGrid .cards .colorBox,
 .colorPalette .cardsGrid .cards .colorInfo {
@@ -330,7 +344,6 @@ hr {
 .ctWr .ctHd {
   display: grid;
   grid-row-gap: var(--g-16);
-  margin-top: var(--g-24);
 }
 .ctWr .ctHd img {
   margin-bottom: var(--g-48);

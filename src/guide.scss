@@ -327,17 +327,3 @@ p {
         border: var(--border) var(--black);
     }
 }
-
-.colorBox {
-    display: flex;
-    flex-direction: row;
-    gap: var(--g-8);
-    align-items: center;
-
-    .box {
-        border-radius: var(--g-4);
-        width: var(--g-16);
-        height: var(--g-16);
-        border: 1px solid var(--black);
-    }
-}
