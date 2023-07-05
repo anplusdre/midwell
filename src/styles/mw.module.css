@@ -68,7 +68,6 @@ hr {
   margin-bottom: var(--g-24);
 }
 .navigation .nav-dropdown {
-  margin-top: var(--g-8);
   max-height: 0;
   flex-direction: column;
   overflow: hidden;
@@ -91,6 +90,7 @@ hr {
 }
 .navigation .nav-dropdown.open {
   max-height: 500px;
+  margin: var(--g-4) 0;
   transition: max-height 0.2s ease-in 0s;
 }
 .navigation ul li {
@@ -186,14 +186,17 @@ hr {
 
 .tables.darkTheme {
   border-color: var(--black);
+  font-size: var(--g-14);
 }
 .tables.darkTheme .tableHead {
   border-color: var(--black);
 }
 .tables.darkTheme .tableHead th {
   border-color: 0;
+  font-weight: 500;
 }
 .tables.darkTheme .tableBody td {
+  font-weight: 3 0;
   border-bottom-color: var(--black);
 }
 
@@ -239,21 +242,26 @@ hr {
   padding-top: var(--g-16);
 }
 .TableofContent .TableofContentWrapper ul li {
-  margin: 0;
+  margin: var(--g-8) 0;
 }
 .TableofContent .TableofContentWrapper ul li a {
   font: var(--single-14-rg);
   color: var(--disable-02);
-  padding: var(--g-8) var(--g-16);
+  padding: var(--g-8) 0;
+  margin-left: var(--g-32);
   padding-left: 0;
   transition: color 0.02s ease-in-out;
+  text-align: right;
+  border-bottom: 1px solid;
+  border-color: transparent;
 }
 .TableofContent .TableofContentWrapper ul li a:hover {
   color: var(--white);
 }
 .TableofContent .TableofContentWrapper .active {
-  color: var(--primary-03);
+  color: var(--white);
   font-weight: 500;
+  border-color: var(--white);
 }
 
 .title {
@@ -303,7 +311,7 @@ hr {
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: var(--g-16);
   grid-row-gap: var(--g-24);
-  margin-bottom: var(--g-48);
+  margin-bottom: var(--g-80);
 }
 .colorPalette .cardsGrid .cards {
   display: flex;
@@ -467,33 +475,14 @@ hr {
 }
 
 .examples {
-  background: rgba(255, 255, 255, 0.04);
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-color: transparent;
+  background: linear-gradient(to right, #1e1f23, transparent);
   margin: var(--g-24) 0;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to right, var(--grey), var(--dark-bg));
   border-radius: var(--radius-8);
   padding: var(--g-32) var(--g-24);
 }
 .examples button {
   font-size: 0.875rem;
   background: var(--black);
-}
-
-.iconBox {
-  padding: var(--g-4);
-  cursor: pointer;
-  display: flex;
-  align-self: center;
-  transition: background-color 0.2s ease-in-out;
-}
-.iconBox:hover > svg > .iconStyle {
-  stroke: var(--white);
-}
-.iconBox .iconStyle {
-  transition: stroke 0.2s ease-in-out;
 }
 
 .typography {

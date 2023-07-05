@@ -61,6 +61,22 @@
   gap: var(--g-12);
   align-items: center;
 }
+.codeBlock .codeBlockHeader .codeAction .iconBox,
+.copyBlock .codeBlockHeader .codeAction .iconBox {
+  padding: var(--g-4);
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  transition: background-color 0.2s ease-in-out;
+}
+.codeBlock .codeBlockHeader .codeAction .iconBox:hover > svg > .iconStyle,
+.copyBlock .codeBlockHeader .codeAction .iconBox:hover > svg > .iconStyle {
+  stroke: var(--white);
+}
+.codeBlock .codeBlockHeader .codeAction .iconBox .iconStyle,
+.copyBlock .codeBlockHeader .codeAction .iconBox .iconStyle {
+  transition: stroke 0.2s ease-in-out;
+}
 .codeBlock .hollow,
 .copyBlock .hollow {
   border-left: none;

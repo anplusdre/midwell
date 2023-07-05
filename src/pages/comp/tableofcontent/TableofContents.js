@@ -25,11 +25,6 @@ const TableOfContents = ({ sections }) => {
       );
 
       setActiveSection(activeSection.id);
-
-      const activeSectionPath = sections.find((section) => section.id === activeSection.id)?.path;
-      if (activeSectionPath && location.pathname !== activeSectionPath) {
-        navigate(activeSectionPath, { replace: true });
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -37,7 +32,7 @@ const TableOfContents = ({ sections }) => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [sections, location.pathname, navigate]);
+  }, [sections]);
 
   useEffect(() => {
     if (location.hash) {
@@ -50,15 +45,20 @@ const TableOfContents = ({ sections }) => {
   const dropActive = (sectionId) =>
     sectionId === activeSection ? styles.active : styles.nav_link;
 
-  const handleClick = (event, sectionId) => {
-    const sectionElement = document.getElementById(sectionId);
-    if (sectionElement) {
-      event.preventDefault();
-      const sectionTopOffset = sectionElement.offsetTop - 85; // Adjusted scroll position with 85px margin
-      window.scrollTo({ top: sectionTopOffset, behavior: 'smooth' });
-      navigate(sectionId);
-    }
-  };
+    const handleClick = (event, sectionId) => {
+      const sectionElement = document.getElementById(sectionId);
+      if (sectionElement) {
+        event.preventDefault();
+        const sectionTopOffset = sectionElement.offsetTop - 85; // Adjusted scroll position with 85px margin
+        window.scrollTo(0, sectionTopOffset);
+    
+        const newUrl = `${window.location.pathname}#${sectionId}`;
+        window.history.pushState(null, '', newUrl);
+    
+        setActiveSection(sectionId);
+      }
+    };
+    
 
   return (
     <nav>
@@ -66,7 +66,7 @@ const TableOfContents = ({ sections }) => {
         {sections.map((section) => (
           <li key={section.id}>
             <NavLink
-              to={section.path}
+              to={`#${section.id}`}
               smooth="true"
               duration={500}
               className={dropActive(section.id)}

@@ -60,6 +60,22 @@
             gap: var(--g-12);
             align-items: center;
 
+            .iconBox {
+                padding: var(--g-4);
+                cursor: pointer;
+                display: flex;
+                align-self: center;
+                transition: background-color .2s ease-in-out;
+
+                &:hover>svg>.iconStyle {
+                    stroke: var(--white);
+                }
+
+                .iconStyle {
+                    transition: stroke .2s ease-in-out;
+                }
+            }
+
         }
 
     }

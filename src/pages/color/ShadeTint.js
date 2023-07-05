@@ -54,7 +54,7 @@ const ShadeTint = () => {
           ))}
         </div>
 
-        <div className={styles.cardTitle} id><div className={styles.prmIcon}></div>Primary Color</div>
+        <div className={styles.cardTitle}><div className={styles.prmIcon}></div>Primary Color</div>
         <div className={styles.cardSubTitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         <div className={styles.cardsGrid}>
           {primary.map((color, index) => (

@@ -1,7 +1,6 @@
 import './main.css';
 import Footer from './components/Footer';
 import Frame from './components/Frame';
-import CSSModulesWrapper from './styles/CssModule';
 
 
 function App() {
