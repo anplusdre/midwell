@@ -7,8 +7,8 @@ ButtonSizes : `<button className="btn xs">X Small</button>
 <button className="btn lg">Large</button>
 `,
 ButtonStyles : `<button className="btn sm sl">Solid</button>
-<button className="btn sm ol">Outline</button>
 <button className="btn sm fd">Fade</button>
+<button className="btn sm ol">Outline</button>
 `,
 ButtonColors : `<button className="btn sm nt">Neutral</button>
 <button className="btn sm primary">Primary</button>

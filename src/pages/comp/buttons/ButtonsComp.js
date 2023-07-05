@@ -74,7 +74,7 @@ const ButtonsComp = () => {
           <div className={styles.ctBd}>
             <h5 className={styles.title}>Styles</h5>
             <p>Button styles work as a distinction between buttons in order to achieve visual hierarchy, which will alwyas help users to recognize what they click even without reading it's text. </p>
-            <Exemplar buttonContent={<><button className="btn sm sl">Solid</button><button className="btn sm fd">Fade</button><button className="btn sm ol">Outline</button><button className="btn sm gh">Ghost</button></>} />
+            <Exemplar buttonContent={<><button className="btn sm sl">Solid</button><button className="btn sm fd">Fade</button><button className="btn sm ol">Outline</button></>} />
             <CodeBlockComponent text={ButtonTables.ButtonStyles} language="jsx" Copy={true} CodeTitle={"jsx"} />
           </div>
 
