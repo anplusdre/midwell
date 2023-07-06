@@ -10,6 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import ButtonsComp from '../pages/comp/buttons/ButtonsComp';
+import LabelsComp from '../pages/comp/labels/LabelsComp';
 
 const Content = () => {
   return (
@@ -22,6 +23,7 @@ const Content = () => {
             <Route path="/typography" element={<Typography />} ></Route>
             <Route path="/comp"></Route>
             <Route path="/components/buttons" element={<ButtonsComp />} ></Route>
+            <Route path="/components/labels" element={<LabelsComp />}> </Route>
         </Routes>
   </div>
   );

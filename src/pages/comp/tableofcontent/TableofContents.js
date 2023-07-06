@@ -13,7 +13,7 @@ const TableOfContents = ({ sections }) => {
         const element = document.getElementById(section.id);
         return {
           id: section.id,
-          position: element ? element.offsetTop - 85 : 0, // Adjusted scroll position with 85px margin
+          position: element ? element.offsetTop -96 : 0, // Adjusted scroll position with 85px margin
         };
       });
 
@@ -25,6 +25,10 @@ const TableOfContents = ({ sections }) => {
       );
 
       setActiveSection(activeSection.id);
+
+      // Update the URL based on the active section
+      const newUrl = `${window.location.pathname}#${activeSection.id}`;
+      window.history.replaceState(null, '', newUrl);
     };
 
     window.addEventListener('scroll', handleScroll);

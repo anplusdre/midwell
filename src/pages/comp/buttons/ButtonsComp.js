@@ -4,7 +4,7 @@ import CodeBlockComponent from '../codeblock/CodeBlock';
 import {Exemplar} from '../exemplar/Exemplar';
 import ContentTable from '../../../components/ContentTable';
 import './button.css'
-import styles from '../../../styles/mw.module.css'; // Import CSS module
+import styles from '../../../styles/mw.module.css';
 import '../codeblock/codeblock.css';
 
 const code1 = '<button>';

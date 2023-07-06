@@ -36,19 +36,19 @@
 .Content {
   width: 100%;
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-column-gap: var(--g-24);
+  grid-template-columns: 800px 1fr;
+  grid-column-gap: var(--g-40);
   margin-top: var(--g-24);
 }
 
 .Grid {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 960px;
   grid-column-gap: var(--g-24);
 }
 
 .container {
-  width: 1280px;
+  width: 1200px;
   margin: var(--center-hr);
 }
 
@@ -61,6 +61,7 @@ hr {
 
 .navigation {
   position: sticky;
+  margin-top: var(--g-24);
   top: 85px;
   height: calc(100vh - 6rem);
 }
@@ -241,27 +242,18 @@ hr {
   margin: 0;
   padding-top: var(--g-16);
 }
-.TableofContent .TableofContentWrapper ul li {
-  margin: var(--g-8) 0;
-}
 .TableofContent .TableofContentWrapper ul li a {
   font: var(--single-14-rg);
   color: var(--disable-02);
-  padding: var(--g-8) 0;
-  margin-left: var(--g-32);
+  padding: var(--g-12) 0;
   padding-left: 0;
-  transition: color 0.02s ease-in-out;
-  text-align: right;
-  border-bottom: 1px solid;
-  border-color: transparent;
 }
 .TableofContent .TableofContentWrapper ul li a:hover {
   color: var(--white);
 }
 .TableofContent .TableofContentWrapper .active {
-  color: var(--white);
+  color: var(--primary-03);
   font-weight: 500;
-  border-color: var(--white);
 }
 
 .title {
@@ -457,7 +449,6 @@ hr {
   flex-direction: column;
 }
 .ctWr .ctBd p {
-  color: var(--disable-02);
   font-size: var(--g-16);
   line-height: 1.5;
 }
@@ -476,6 +467,7 @@ hr {
 
 .examples {
   background: linear-gradient(to right, #1e1f23, transparent);
+  border: 1px solid var(--black);
   margin: var(--g-24) 0;
   border-radius: var(--radius-8);
   padding: var(--g-32) var(--g-24);
