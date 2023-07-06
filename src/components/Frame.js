@@ -71,6 +71,10 @@ const Navigation = () => {
                 <li><NavLink className={dropActive} to="/accordion">Accordion</NavLink></li>
               </ul>
             </div>
+
+            <div className={styles.list}>
+              <div className={styles['nav-head']}>React Components</div>
+            </div>
           </div>
 
           <Content />

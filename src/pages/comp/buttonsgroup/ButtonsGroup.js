@@ -7,7 +7,7 @@ import '../buttons/button.css'
 import ContentTable from "../../../components/ContentTable";
 import SectionData from "../../../components/ComponentSection";
 
-const LabelsComp = () => {
+const ButtonsGroup = () => {
     const sections = [
         { id: 'Base', label: 'Get Started', path: '/components/labels#Base' },
         { id: 'Adjacent', label: 'Adjacent Buttons', path: '/components/labels#Adjacent' },
@@ -35,10 +35,22 @@ const LabelsComp = () => {
                 <hr />
 
                 <div className={styles.ctBd} id="Adjacent">
-                    <h5 className={styles.title}>Adjacent Buttons</h5>
+                    <h5 className={styles.title}>Adjacent</h5>
                     <p>For a group of buttons that is adjacent without gaps, we need to looks like a capsule with different style at the first and the last item, for more please see example.</p>
                     
                     <Exemplar buttonContent={<div className="btn-group btn-adjacent"><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button></div>} />
+                    <CodeBlockComponent text={ButtonTables.ButtonsGroup2} language="jsx" Copy={true} CodeTitle={"jsx"} />
+
+                    <p className='top-24'>For onClick( ) event like active state, refer to example below. You can also combine this with Our React Component <span className={styles.highlight}>React Adjacent Buttons</span></p> 
+                    <Exemplar buttonContent={<div className="btn-group btn-adjacent" role="group"><button className="btn sm primary active" aria-current="page">Active</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button></div>} />
+                    <CodeBlockComponent text={ButtonTables.ButtonsGroup2} language="jsx" Copy={true} CodeTitle={"jsx"} />
+                </div>
+
+                <hr />
+
+                <div className={styles.ctBd} id="Adjacent Outline">
+                    <h5 className={styles.title}>Adjacent Outline</h5>
+                    <Exemplar buttonContent={<div className="btn-group btn-adjacent"><button className="btn sm outline primary">Button</button><button className="btn sm outline primary">Button</button><button className="btn sm outline primary">Button</button></div>} />
                     <CodeBlockComponent text={ButtonTables.ButtonsGroup2} language="jsx" Copy={true} CodeTitle={"jsx"} />
                 </div>
 
@@ -48,4 +60,4 @@ const LabelsComp = () => {
       );
 };
 
-export default LabelsComp;
+export default ButtonsGroup;

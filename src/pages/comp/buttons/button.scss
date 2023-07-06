@@ -45,9 +45,9 @@ font-weight,
     color: var(--primary-05);
 
     &:hover {
-        background: transparent;
-        border-color: var(--primary-03);
-        color: var(--primary-03);
+        background: var(--primary-05);
+        border-color: transparent;
+        color: var(--white);
         transition: $transition;
         transition-timing-function: ease-out;
     }
@@ -60,6 +60,7 @@ font-weight,
     &:hover {
         background: var(--primary-02);
         color: var(--primary-06);
+        border-color: var(--primary-05);
         transition: $transition;
         transition-timing-function: ease-out;
     }
@@ -86,10 +87,14 @@ font-weight,
     background: var(--primary-05);
 
     &:hover {
-        background: var(--primary-06);
+        background: var(--primary-04);
         transition: $transition;
         transition-timing-function: ease-out;
     }
+}
+
+.btn.primary.btn.primary:not(.btn.outline.primary, .btn.fade.primary).active{
+    background: var(--primary-06);
 }
 
 .btn.positive {

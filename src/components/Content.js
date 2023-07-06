@@ -10,7 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import ButtonsComp from '../pages/comp/buttons/ButtonsComp';
-import LabelsComp from '../pages/comp/Labels/LabelsComp';
+import LabelsComp from '../pages/comp/labels/LabelsComp';
 import ButtonsGroup from '../pages/comp/buttonsgroup/ButtonsGroup';
 
 const Content = () => {
