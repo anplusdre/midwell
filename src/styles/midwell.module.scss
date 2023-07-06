@@ -462,3 +462,8 @@ button {
     align-items: center;
     gap: var(--g-8);
 }
+
+.btn-group {
+    display: flex;
+    gap: var(--g-8);
+}

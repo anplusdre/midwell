@@ -24,9 +24,18 @@ ButtonColorVariants : <><button className="btn sm sl nt">Neutral</button>
 </>,
 ButtonIcons : `<button className="btn sm sl nt i-lf"> <img src='../assets/copy.svg' />Left Icon </button>
 <button className="btn sm sl primary i-rg"> <img src='../assets/copy.svg' />Right Icon </button>
-`
-
-}
-
+`,
+ButtonsGroup1 : `<div className="btn-group">
+    <button className="btn sm primary">Button</button>
+    <button className="btn sm outline primary">Button</button>
+    <button className="btn sm fade primary">Button</button>
+</div>`,
+ButtonsGroup2 : `<div className="btn-group btn-adjacent">
+    <button className="btn sm primary">Button</button>
+    <button className="btn sm primary">Button</button>
+    <button className="btn sm primary">Button</button>
+    <button className="btn sm primary">Button</button>
+</div>`
+};
 
 export default ButtonTables;

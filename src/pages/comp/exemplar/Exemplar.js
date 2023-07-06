@@ -18,4 +18,4 @@ const ExemplarBlue = ({ buttonContent }) => {
   );
 };
 
-export { Exemplar, ExemplarBlue };
+export default Exemplar;

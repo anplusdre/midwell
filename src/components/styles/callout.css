@@ -1,0 +1,28 @@
+.callout {
+  padding: var(--g-16);
+  margin: var(--g-24) 0;
+  line-height: 1.5;
+  font-size: var(--g-14);
+  border: 1px solid;
+  border-color: transparent;
+}
+.callout code {
+  color: var(--white);
+  background: none;
+}
+.callout .className {
+  color: var(--white);
+}
+
+.co-warning {
+  border-radius: var(--radius-8);
+}
+
+.co-warning.darkTheme {
+  background: rgba(28, 213, 251, 0.12);
+  border-color: #0a4d5a;
+  color: #1cd5fb;
+}
+.co-warning.darkTheme code {
+  color: var(--secondary-03);
+}/*# sourceMappingURL=callout.css.map */

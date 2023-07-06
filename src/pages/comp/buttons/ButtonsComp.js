@@ -1,9 +1,10 @@
 import React from 'react';
 import { ButtonTables, ButtonSizeTableData, ButtonSizeTable } from './indexing';
 import CodeBlockComponent from '../codeblock/CodeBlock';
-import {Exemplar} from '../exemplar/Exemplar';
+import Exemplar from '../exemplar/Exemplar';
 import ContentTable from '../../../components/ContentTable';
 import './button.css'
+import '../../../components/styles/callout.css'
 import styles from '../../../styles/mw.module.css';
 import '../codeblock/codeblock.css';
 
@@ -26,17 +27,16 @@ const ButtonsComp = () => {
             <p style={{ fontSize: "var(--g-20)", fontWeight: "300" }}>
               At present, there are five button styles available: Solid, Outline, Fade, Ghost, and Disable. Each of these styles further encompasses five different variants: Neutral, Primary, Positive, Caution, and Negative.
             </p>
-            <img className="top-16" src='../assets/CompButtons.png' alt='buttons'></img>
+            <img className="top-16" src='../assets/CompButtonsBlack.png' alt='buttons'></img>
           </div>
 
           <div className={styles.ctBd} id="Base">
             <h5 className={styles.title}>Get Started</h5>
-            <p>Midwell provides a base `.btn` class that establishes fundamental styles including padding and content alignment. By default, buttons with the <code>.btn</code> class have a transparent border and background color. They do not possess any specific focus or hover styles defined.
-            </p>
+            <p>Midwell provides a base `.btn` class that establishes fundamental styles including padding and content alignment. By default, buttons with the <code>.btn</code> class have a transparent border and background color. They do not possess any specific focus or hover styles defined.</p>
 
             <Exemplar buttonContent={<button className="btn sm">Button</button>} />
             <CodeBlockComponent text={ButtonTables.ButtonStart} language="jsx" Copy={true} CodeTitle={"jsx"} />
-            <div className="callout co-warning">
+            <div className="callout co-warning darkTheme">
               You can utilize the <code>.btn</code> class with either the <code>{code1}</code> tag or a <code>{code2}</code> tag. It is important to note that the class must begin with <code>.btn</code>. Additionally, please keep in mind that the button element does not have a predefined width. If you wish to create a row or column of buttons, you will need to manually assign a flex or grid parent and set the appropriate properties.
             </div>
           </div>
@@ -74,7 +74,7 @@ const ButtonsComp = () => {
           <div className={styles.ctBd}>
             <h5 className={styles.title}>Styles</h5>
             <p>Button styles work as a distinction between buttons in order to achieve visual hierarchy, which will alwyas help users to recognize what they click even without reading it's text. </p>
-            <Exemplar buttonContent={<><button className="btn sm sl">Solid</button><button className="btn sm fd">Fade</button><button className="btn sm ol">Outline</button></>} />
+            <Exemplar buttonContent={<><button className="btn sm sl">Solid</button><button className="btn sm fd">Fade</button><button className="btn sm outline">Outline</button></>} />
             <CodeBlockComponent text={ButtonTables.ButtonStyles} language="jsx" Copy={true} CodeTitle={"jsx"} />
           </div>
 

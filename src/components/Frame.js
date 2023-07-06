@@ -65,6 +65,7 @@ const Navigation = () => {
               <div className={styles['nav-head']}>Components</div>
               <ul>
                 <li><NavLink className={dropActive} to="/components/buttons">Buttons</NavLink></li>
+                <li><NavLink className={dropActive} to="/components/buttonsgroup">Buttons Group</NavLink></li>
                 <li><NavLink className={dropActive} to="/components/labels">Labels</NavLink></li>
                 <li><NavLink className={dropActive} to="/checkboxes">Checkboxes</NavLink></li>
                 <li><NavLink className={dropActive} to="/accordion">Accordion</NavLink></li>

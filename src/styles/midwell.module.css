@@ -421,4 +421,9 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: var(--g-8);
+}
+
+.btn-group {
+  display: flex;
+  gap: var(--g-8);
 }/*# sourceMappingURL=midwell.module.css.map */
