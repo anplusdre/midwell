@@ -3,6 +3,8 @@ color,
 font-weight,
 0.2s ease-in;
 
+
+//Base 
 .btn {
     cursor: pointer;
     outline: none;
@@ -16,6 +18,8 @@ font-weight,
     -webkit-box-sizing: border-box;
     transition: $transition;
 }
+
+//Sizes
 
 .btn.xs {
     padding: var(--pd-sm-smd);
@@ -32,6 +36,8 @@ font-weight,
 .btn.lg {
     padding: var(--g-16) var(--g-16);
 }
+
+//Style - Outline
 
 .btn.outline {
     color: var(--white);
@@ -52,6 +58,14 @@ font-weight,
         transition-timing-function: ease-out;
     }
 }
+
+.btn.outline.primary.active {
+    border-color: transparent;
+    background: var(--primary-05);
+    color: var(--white);
+}
+
+//Style - Fade
 
 .btn.fade.primary {
     background: var(--primary-01);
@@ -81,6 +95,8 @@ font-weight,
     color: var(--white);
     background: var(--black);
 }
+
+//Style - Primary
 
 .btn.primary:not(.btn.outline.primary, .btn.fade.primary) {
     color: var(--white);
@@ -177,5 +193,15 @@ font-weight,
     &:last-child {
         border-top-right-radius: var(--radius-8);
         border-bottom-right-radius: var(--radius-8);
+    }
+}
+
+.btn-adjacent > .btn.outline.primary {
+    &:first-child {
+        border-right-color: transparent;
+    }
+
+    &:last-child {
+        border-left-color: transparent;
     }
 }

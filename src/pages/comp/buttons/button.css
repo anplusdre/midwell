@@ -47,6 +47,12 @@
   transition-timing-function: ease-out;
 }
 
+.btn.outline.primary.active {
+  border-color: transparent;
+  background: var(--primary-05);
+  color: var(--white);
+}
+
 .btn.fade.primary {
   background: var(--primary-01);
   color: var(--primary-05);
@@ -164,4 +170,11 @@
 .btn-group.btn-adjacent > .btn:last-child {
   border-top-right-radius: var(--radius-8);
   border-bottom-right-radius: var(--radius-8);
+}
+
+.btn-adjacent > .btn.outline.primary:first-child {
+  border-right-color: transparent;
+}
+.btn-adjacent > .btn.outline.primary:last-child {
+  border-left-color: transparent;
 }/*# sourceMappingURL=button.css.map */

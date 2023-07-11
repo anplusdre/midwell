@@ -52,7 +52,13 @@ const ButtonsGroup = () => {
                     <h5 className={styles.title}>Adjacent Outline</h5>
                     <Exemplar buttonContent={<div className="btn-group btn-adjacent"><button className="btn sm outline primary">Button</button><button className="btn sm outline primary">Button</button><button className="btn sm outline primary">Button</button></div>} />
                     <CodeBlockComponent text={ButtonTables.ButtonsGroup2} language="jsx" Copy={true} CodeTitle={"jsx"} />
+
+                    <p className="top-24">Below are the active state example.</p>
+                    <Exemplar buttonContent={<div className="btn-group btn-adjacent"><button className="btn sm outline primary active">Button</button><button className="btn sm outline primary">Button</button><button className="btn sm outline primary">Button</button></div>} />
                 </div>
+
+                <hr />
+                
 
             </div>
           </div>
