@@ -23,9 +23,9 @@ const Content = () => {
             <Route path="/color/colorusage" element={<ColorUsage />} ></Route>
             <Route path="/typography" element={<Typography />} ></Route>
             <Route path="/comp"></Route>
-            <Route path="/components/buttons" element={<ButtonsComp />} ></Route>
-            <Route path="/components/buttonsgroup" element={<ButtonsGroup />}> </Route>
-            <Route path="/components/labels" element={<LabelsComp />}> </Route>
+            <Route path="/comp/buttons" element={<ButtonsComp />} ></Route>
+            <Route path="/comp/buttonsgroup" element={<ButtonsGroup />}> </Route>
+            <Route path="/comp/labels" element={<LabelsComp />}> </Route>
         </Routes>
   </div>
   );
