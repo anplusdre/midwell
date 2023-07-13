@@ -33,6 +33,12 @@
   background: transparent;
   border-color: initial;
 }
+.btn.outline:first-child {
+  border-right: 0;
+}
+.btn.outline:last-child {
+  border-left: 0;
+}
 
 .btn.outline.primary {
   background: transparent;
@@ -92,7 +98,7 @@
 }
 
 .btn.primary.btn.primary:not(.btn.outline.primary, .btn.fade.primary).active {
-  background: var(--primary-06);
+  background: var(--primary-07);
 }
 
 .btn.positive {
@@ -105,9 +111,19 @@
   background: var(--secondary);
 }
 
-.btn.warning {
+.btn.caution {
   color: var(--white);
   background: var(--caution-05);
+}
+
+.btn.outline.caution {
+  background-color: transparent;
+  border-color: var(--caution-05);
+  color: var(--caution-05);
+}
+.btn.outline.caution:hover {
+  background-color: var(--caution-05);
+  color: var(--white);
 }
 
 .btn.negative {
@@ -156,11 +172,29 @@
   gap: var(--g-8);
 }
 
+.btn-group.no-gap {
+  gap: 0;
+}
+
+.btn-group.vertical {
+  flex-direction: column;
+}
+
 .btn-group.btn-adjacent {
   gap: 0;
 }
 .btn-group.btn-adjacent .btn {
   border-radius: 0;
+}
+
+.btn-group.btn-adjacent.vertical > .btn:first-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: var(--g-8);
+}
+.btn-group.btn-adjacent.vertical > .btn:last-child {
+  border-top-right-radius: 0;
+  border-bottom-left-radius: var(--g-8);
 }
 
 .btn-group.btn-adjacent > .btn:first-child {

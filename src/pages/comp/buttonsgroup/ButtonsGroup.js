@@ -16,12 +16,11 @@ const ButtonsGroup = () => {
         <><div>
           <div className={styles.ButtonsGroup}>
             <div className={styles.ctWr}>
-                <div className={styles.ctHd}>
+                <div className={styles.ctHd + ' ' + 'btm-48'}>
                     <div className={styles.ctTl}>Buttons Group</div>
-                        <p style={{ fontSize: "var(--g-20)", fontWeight: "300" }}>
+                        <p style={{ fontSize: "var(--g-24)", fontWeight: "300" }}>
                             You can easily stack buttons together side by side with various styles.
                         </p>
-                        <img className="top-16" src='../assets/CompButtons.png' alt='buttons'></img>
                 </div>
 
                 <div className={styles.ctBd} id="Base">
@@ -32,6 +31,8 @@ const ButtonsGroup = () => {
                     <CodeBlockComponent text={ButtonTables.ButtonsGroup1} language="jsx" Copy={true} CodeTitle={"jsx"} />
                 </div>
 
+                
+
                 <hr />
 
                 <div className={styles.ctBd} id="Adjacent">
@@ -40,8 +41,13 @@ const ButtonsGroup = () => {
                     
                     <Exemplar buttonContent={<div className="btn-group btn-adjacent"><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button></div>} />
                     <CodeBlockComponent text={ButtonTables.ButtonsGroup2} language="jsx" Copy={true} CodeTitle={"jsx"} />
+                </div>
 
-                    <p className='top-24'>For onClick( ) event like active state, refer to example below. You can also combine this with Our React Component <span className={styles.highlight}>React Adjacent Buttons</span></p> 
+                <hr />
+
+                <div className={styles.ctBd} id="Active">
+                    <h5 className={styles.title}>Active State</h5>
+                    <p>For onClick( ) event like active state, refer to example below. You can also combine this with Our React Component <span className={styles.highlight}>React Adjacent Buttons</span></p> 
                     <Exemplar buttonContent={<div className="btn-group btn-adjacent" role="group"><button className="btn sm primary active" aria-current="page">Active</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button></div>} />
                     <CodeBlockComponent text={ButtonTables.ButtonsGroup2} language="jsx" Copy={true} CodeTitle={"jsx"} />
                 </div>
@@ -54,11 +60,18 @@ const ButtonsGroup = () => {
                     <CodeBlockComponent text={ButtonTables.ButtonsGroup2} language="jsx" Copy={true} CodeTitle={"jsx"} />
 
                     <p className="top-24">Below are the active state example.</p>
-                    <Exemplar buttonContent={<div className="btn-group btn-adjacent"><button className="btn sm outline primary active">Button</button><button className="btn sm outline primary">Button</button><button className="btn sm outline primary">Button</button></div>} />
+                    <Exemplar buttonContent={<div className="btn-group btn-adjacent"><button className="btn sm outline caution active">Button</button><button className="btn sm outline caution">Button</button><button className="btn sm outline caution">Button</button></div>} />
                 </div>
 
                 <hr />
                 
+                <div className={styles.ctBd} id="Vertical">
+                    <h5 className={styles.title}>Vertical</h5>
+                    <p>For a group of buttons that is adjacent without gaps, we need to looks like a capsule with different style at the first and the last item, for more please see example.</p>
+                    
+                    <Exemplar buttonContent={<div className="btn-group btn-adjacent vertical"><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button><button className="btn sm primary">Button</button></div>} />
+                    <CodeBlockComponent text={ButtonTables.ButtonsGroup2} language="jsx" Copy={true} CodeTitle={"jsx"} />
+                </div>
 
             </div>
           </div>

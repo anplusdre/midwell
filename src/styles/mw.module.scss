@@ -55,12 +55,12 @@ $ease: all .2s ease-in-out;
 
 .Grid {
     display: grid;
-    grid-template-columns: 1fr 960px;
+    grid-template-columns: 1fr 1024px;
     grid-column-gap: var(--g-24);
 }
 
 .container {
-    width: 1200px;
+    width: 1280px;
     margin: var(--center-hr);
 }
 
