@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url("../../fonts/SourceCodePro-VariableFont_wght.ttf");
+    font-weight: 100 800;
+}
+
 .callout {
     padding: var(--g-16);
     margin: var(--g-24) 0;
@@ -28,5 +34,7 @@
 
     code {
         color: var(--secondary-03);
+        font-weight: bold;
+        font-family: 'Source Code Pro';
     }
 }

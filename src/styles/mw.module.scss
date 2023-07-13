@@ -575,6 +575,7 @@ hr {
         p {
             // color: var(--disable-02);
             font-size: var(--g-16);
+            margin: var(--g-16) 0;
             line-height: 1.5;
         }
 
@@ -601,9 +602,10 @@ hr {
 }
 
 .examples {
-    background: linear-gradient(to right, #1e1f23, transparent);
+    // background: linear-gradient(to right, #1e1f23, transparent);
     border: 1px solid var(--black);
-    margin: var(--g-24) 0;
+    // margin: var(--g-24) 0;
+    margin-bottom: var(--g-16);
     border-radius: var(--radius-8);
     padding: var(--g-32) var(--g-24);
 
