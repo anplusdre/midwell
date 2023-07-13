@@ -43,14 +43,6 @@ font-weight,
     color: var(--white);
     background: transparent;
     border-color: initial;
-
-    &:first-child {
-        border-right: 0;
-    }
-
-    &:last-child {
-        border-left: 0;
-    }
 }
 
 .btn.outline.primary {
@@ -191,6 +183,17 @@ font-weight,
 .btn-group {
     display: flex;
     gap: var(--g-8);
+}
+
+.btn-group.btn-adjacent>.btn.outline {
+
+    &:first-child {
+        border-right: 0;
+    }
+
+    &:last-child {
+        border-left: 0;
+    }
 }
 
 .btn-group.no-gap {

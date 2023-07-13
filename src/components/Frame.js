@@ -2,11 +2,9 @@
 import React, { useState } from 'react';
 import styles from '../styles/mw.module.css';
 import Logo from '../assets/midwell_logo.svg';
-import ContentTable from './ContentTable';
 import {
   BrowserRouter as Router,
   NavLink,
-  Switch,
 } from "react-router-dom";
 import Content from './Content';
 
@@ -64,6 +62,7 @@ const Navigation = () => {
             <div className={styles.list}>
               <div className={styles['nav-head']}>Components</div>
               <ul>
+                <li><NavLink className={dropActive} to="/comp/navigation">Navigation</NavLink></li>
                 <li><NavLink className={dropActive} to="/comp/buttons">Buttons</NavLink></li>
                 <li><NavLink className={dropActive} to="/comp/buttonsgroup">Buttons Group</NavLink></li>
                 <li><NavLink className={dropActive} to="/comp/labels">Labels</NavLink></li>

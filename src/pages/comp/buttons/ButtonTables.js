@@ -13,13 +13,13 @@ ButtonStyles : `<button className="btn sm sl">Solid</button>
 ButtonColors : `<button className="btn sm nt">Neutral</button>
 <button className="btn sm primary">Primary</button>
 <button className="btn sm positive">Positive</button>
-<button className="btn sm warning">Warning</button>
+<button className="btn sm caution">Caution</button>
 <button className="btn sm negative">Negative</button>
 `, 
 ButtonColorVariants : <><button className="btn sm sl nt">Neutral</button>
 <button className="btn sm primary">Primary</button>
 <button className="btn sm positive">Positive</button>
-<button className="btn sm warning">Warning</button>
+<button className="btn sm caution">Caution</button>
 <button className="btn sm negative">Negative</button>
 </>,
 ButtonIcons : `<button className="btn sm sl nt i-lf"> <img src='../assets/copy.svg' />Left Icon </button>

@@ -33,12 +33,6 @@
   background: transparent;
   border-color: initial;
 }
-.btn.outline:first-child {
-  border-right: 0;
-}
-.btn.outline:last-child {
-  border-left: 0;
-}
 
 .btn.outline.primary {
   background: transparent;
@@ -170,6 +164,13 @@
 .btn-group {
   display: flex;
   gap: var(--g-8);
+}
+
+.btn-group.btn-adjacent > .btn.outline:first-child {
+  border-right: 0;
+}
+.btn-group.btn-adjacent > .btn.outline:last-child {
+  border-left: 0;
 }
 
 .btn-group.no-gap {

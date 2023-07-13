@@ -9,8 +9,8 @@ import SectionData from "../../../components/ComponentSection";
 
 const ButtonsGroup = () => {
     const sections = [
-        { id: 'Base', label: 'Get Started', path: '/components/labels#Base' },
-        { id: 'Adjacent', label: 'Adjacent Buttons', path: '/components/labels#Adjacent' },
+        { id: 'Base', label: 'Get Started', path: '/comp/labels#Base' },
+        { id: 'Adjacent', label: 'Adjacent Buttons', path: '/comp/labels#Adjacent' },
       ];
       return (
         <><div>

@@ -14,9 +14,10 @@ const code2 = '<div>';
 const ButtonsComp = () => {
   
   const sections = [
-    { id: 'Base', label: 'Base', path: '/components/buttons#Base' },
-    { id: 'Sizes', label: 'Sizes', path: '/components/buttons#Sizes' },
-    { id: 'Variants', label: 'Variants', path: '/components/buttons#Variants' },
+    { id: 'Base', label: 'Base', path: '/comp/buttons#Base' },
+    { id: 'Sizes', label: 'Sizes', path: '/comp/buttons#Sizes' },
+    { id: 'Variants', label: 'Variants', path: '/comp/buttons#Variants' },
+    { id: 'Styles', label: 'Styles', path: '/comp/buttons#Styles' },
   ];
   return (
     <><div>
@@ -71,7 +72,7 @@ const ButtonsComp = () => {
 
           <hr />
 
-          <div className={styles.ctBd}>
+          <div className={styles.ctBd} id='Styles'>
             <h5 className={styles.title}>Styles</h5>
             <p>Button styles work as a distinction between buttons in order to achieve visual hierarchy, which will alwyas help users to recognize what they click even without reading it's text. </p>
             <Exemplar buttonContent={<><button className="btn sm sl">Solid</button><button className="btn sm fd">Fade</button><button className="btn sm outline">Outline</button></>} />

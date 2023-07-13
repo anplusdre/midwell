@@ -10,6 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import ButtonsComp from '../pages/comp/buttons/ButtonsComp';
+import NavigationComponent from '../pages/comp/nav/Navigation';
 import LabelsComp from '../pages/comp/Labels/LabelsComponent';
 import ButtonsGroup from '../pages/comp/buttonsgroup/ButtonsGroup';
 
@@ -23,6 +24,7 @@ const Content = () => {
             <Route path="/color/colorusage" element={<ColorUsage />} ></Route>
             <Route path="/typography" element={<Typography />} ></Route>
             <Route path="/comp"></Route>
+            <Route path="/comp/navigation" element={<NavigationComponent />} ></Route>
             <Route path="/comp/buttons" element={<ButtonsComp />} ></Route>
             <Route path="/comp/buttonsgroup" element={<ButtonsGroup />}> </Route>
             <Route path="/comp/labels" element={<LabelsComp />}> </Route>
